@@ -12,7 +12,7 @@ export default function Header({ activeSection }: HeaderProps) {
     }
   };
 
-  const navItems = ["home", "about", "technologies", "services", "contact"];
+  const navItems = ["home", "about", "technologies", "Works", "contact"];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a051a]/80 backdrop-blur-sm">

@@ -77,7 +77,7 @@ const experiences: Experience[] = [
   },
 ];
 
-export default function Services() {
+export default function Works() {
   const [selectedExperience, setSelectedExperience] =
     useState<Experience | null>(null);
   const [hoveredExperience, setHoveredExperience] = useState<Experience | null>(
