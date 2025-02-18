@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -34,9 +34,8 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" />
         </head>
         <body
-          className={`${inter.className} bg-fixed  bg-gradient-to-t dark:from-primary/10  from-primary/15  to-background rounded-2xl p-4`}
+          className={`${inter.className}  bg-fixed  bg-gradient-to-t dark:from-primary/10  from-primary/15  to-background rounded-2xl p-4`}
         >
-          {" "}
           {children}
         </body>
       </ThemeProvider>
@@ -46,3 +45,4 @@ export default function RootLayout({
 
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import MovingSquare from "@/components/MovingSquare";

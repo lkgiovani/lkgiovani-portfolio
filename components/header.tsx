@@ -19,7 +19,7 @@ export default function Header({ activeSection }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm  ">
       <nav className="container mx-auto px-4 py-6  ">
-        <ul className="flex justify-end space-x-8 items-center ">
+        <ul className="flex relative justify-end space-x-8 items-center ">
           <div className=" flex mx-auto gap-4">
             {navItems.map((item) => (
               <li key={item}>
@@ -36,7 +36,7 @@ export default function Header({ activeSection }: HeaderProps) {
               </li>
             ))}
           </div>
-          <li>
+          <li className="absolute right-0">
             <ModeToggle />
           </li>
         </ul>
