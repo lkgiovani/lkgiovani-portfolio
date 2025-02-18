@@ -24,6 +24,15 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
+        <head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+        </head>
         <body
           className={`${inter.className} bg-fixed  bg-gradient-to-t dark:from-primary/10  from-primary/15  to-background rounded-2xl p-4`}
         >
