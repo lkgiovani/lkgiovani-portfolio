@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Facebook, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   return (
@@ -19,6 +20,7 @@ export default function Hero() {
             almost 3 years and all projects are complited successfully with 100%
             client satisfiction.
           </p>
+
           <div className="flex gap-4 mb-8">
             {[Facebook, Github, Linkedin, Mail].map((Icon, index) => (
               <a
