@@ -13,11 +13,15 @@ export default function SectionTitle({
     return (
       <h2 className="text-4xl font-bold mb-12 text-center">
         {parts[0]}
-        <span className="text-cyan-400">{highlight}</span>
+        <span className="text-foreground">{highlight}</span>
         {parts[1]}
       </h2>
     );
   }
 
-  return <h2 className="text-4xl font-bold mb-12 text-center">{children}</h2>;
+  return (
+    <h2 className="text-4xl font-bold mb-12 text-foreground text-center">
+      {children}
+    </h2>
+  );
 }
