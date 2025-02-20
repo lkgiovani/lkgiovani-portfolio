@@ -1,0 +1,58 @@
+{
+  "header": {
+    "nav": [
+      { "value": "home", "label": "Home" },
+      { "value": "about", "label": "About" },
+      { "value": "technologies", "label": "Technologies" },
+      { "value": "services", "label": "Timeline" },
+      { "value": "contact", "label": "Contact" }
+    ]
+  },
+  "aside": {
+    "states": {
+      "title": "By State",
+      "seeAll": {
+        "open": "See all",
+        "close": "Close all"
+      }
+    }
+  },
+  "main": {
+    "breadcrumbs": {
+      "details": "Details"
+    },
+    "title": {
+      "home": "Members list",
+      "detail": "Member"
+    },
+    "filters": {
+      "showing": "Showing {{count}} of {{total}}",
+      "single": "item",
+      "plural": "items",
+      "order": {
+        "label": "Order by:",
+        "placeholder": "Select",
+        "first": "Name",
+        "last": "Lastname",
+        "date": "Date"
+      }
+    },
+    "user": {
+      "email": "Email:",
+      "gender": "Gender:",
+      "registered": {
+        "label": "Registration date:",
+        "info": ", {{years}} years ago"
+      },
+      "not-found": "No results were found"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "Juntos Somos Mais Loyalty S.A."
+    },
+    "social": {
+      "follow": "Follow us on social media:"
+    }
+  }
+}
