@@ -1,0 +1,58 @@
+{
+  "header": {
+    "nav": [
+      { "value": "home", "label": "Início" },
+      { "value": "about", "label": "Sobre" },
+      { "value": "technologies", "label": "Tecnologia" },
+      { "value": "services", "label": "Linha do tempo" },
+      { "value": "contact", "label": "Contato" }
+    ]
+  },
+  "aside": {
+    "states": {
+      "title": "Por Estado",
+      "seeAll": {
+        "open": "Ver todos",
+        "close": "Recolher"
+      }
+    }
+  },
+  "main": {
+    "breadcrumbs": {
+      "details": "Detalhes"
+    },
+    "title": {
+      "home": "Lista de membros",
+      "detail": "Membro"
+    },
+    "filters": {
+      "showing": "Exibindo {{count}} de {{total}}",
+      "single": "item",
+      "plural": "itens",
+      "order": {
+        "label": "Ordenar por:",
+        "placeholder": "Selecione",
+        "first": "Nome",
+        "last": "Sobrenome",
+        "date": "Data"
+      }
+    },
+    "user": {
+      "email": "E-mail:",
+      "gender": "Gênero:",
+      "registered": {
+        "label": "Data de registro:",
+        "info": ", {{years}} anos atrás"
+      },
+      "not-found": "Nenhum resultado foi encontrado"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "Juntos Somos Mais Fidelização S.A."
+    },
+    "social": {
+      "follow": "Siga-nos nas redes sociais:"
+    }
+  }
+}
