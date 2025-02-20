@@ -9,7 +9,7 @@ export default function SectionTitle({
   highlight,
 }: SectionTitleProps) {
   if (highlight) {
-    const parts = children.toString().split(highlight);
+    const parts = children!.toString().split(highlight);
     return (
       <h2 className="text-4xl font-bold mb-12 text-center">
         {parts[0]}
