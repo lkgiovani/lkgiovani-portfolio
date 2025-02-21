@@ -8,6 +8,7 @@ import Technologies from "@/components/sections/technologies";
 import Experience from "@/components/sections/experience";
 import Contact from "@/components/sections/contact";
 import PortfolioTimeline from "@/components/timeLine";
+import TechnologiesCarousel from "@/components/TechnologiesCarousel";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");

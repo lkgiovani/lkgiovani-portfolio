@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  cursor: url("/bananaNormal.png"), auto !important;
+}
+
 .hexagon-container {
   position: relative;
   width: 400px;
