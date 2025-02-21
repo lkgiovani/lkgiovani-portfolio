@@ -1,4 +1,4 @@
-import TechnologiesCarousel from "@/components/technologies-carousel";
+import TechnologiesCarousel from "../TechnologiesCarousel";
 
 export default function Technologies() {
   return (
