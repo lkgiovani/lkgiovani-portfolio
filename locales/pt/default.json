@@ -8,51 +8,9 @@
       { "value": "contact", "label": "Contato" }
     ]
   },
-  "aside": {
-    "states": {
-      "title": "Por Estado",
-      "seeAll": {
-        "open": "Ver todos",
-        "close": "Recolher"
-      }
-    }
-  },
-  "main": {
-    "breadcrumbs": {
-      "details": "Detalhes"
-    },
-    "title": {
-      "home": "Lista de membros",
-      "detail": "Membro"
-    },
-    "filters": {
-      "showing": "Exibindo {{count}} de {{total}}",
-      "single": "item",
-      "plural": "itens",
-      "order": {
-        "label": "Ordenar por:",
-        "placeholder": "Selecione",
-        "first": "Nome",
-        "last": "Sobrenome",
-        "date": "Data"
-      }
-    },
-    "user": {
-      "email": "E-mail:",
-      "gender": "Gênero:",
-      "registered": {
-        "label": "Data de registro:",
-        "info": ", {{years}} anos atrás"
-      },
-      "not-found": "Nenhum resultado foi encontrado"
-    }
-  },
-  "footer": {
-    "company": {
-      "name": "Juntos Somos Mais Fidelização S.A."
-    },
-    "social": {
-      "follow": "Siga-nos nas redes sociais:"
-    }
+  "hero": {
+    "about": "Sobre mim",
+    "iAm": "Eu sou",
+    "description": " Sou um desenvolvedor full-stack apaixonado por criar sistemasrobustos e escaláveis, especialmente utilizando Golang e Node.js.Embora também tenha experiência no desenvolvimento front-end com React e Next.js, minha principal atuação é no back-end, garantindoeficiência, performance e escalabilidade nas aplicações qudesenvolvo."
   }
 }

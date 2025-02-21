@@ -8,51 +8,9 @@
       { "value": "contact", "label": "Contact" }
     ]
   },
-  "aside": {
-    "states": {
-      "title": "By State",
-      "seeAll": {
-        "open": "See all",
-        "close": "Close all"
-      }
-    }
-  },
-  "main": {
-    "breadcrumbs": {
-      "details": "Details"
-    },
-    "title": {
-      "home": "Members list",
-      "detail": "Member"
-    },
-    "filters": {
-      "showing": "Showing {{count}} of {{total}}",
-      "single": "item",
-      "plural": "items",
-      "order": {
-        "label": "Order by:",
-        "placeholder": "Select",
-        "first": "Name",
-        "last": "Lastname",
-        "date": "Date"
-      }
-    },
-    "user": {
-      "email": "Email:",
-      "gender": "Gender:",
-      "registered": {
-        "label": "Registration date:",
-        "info": ", {{years}} years ago"
-      },
-      "not-found": "No results were found"
-    }
-  },
-  "footer": {
-    "company": {
-      "name": "Juntos Somos Mais Loyalty S.A."
-    },
-    "social": {
-      "follow": "Follow us on social media:"
-    }
+  "hero": {
+    "about": "About me",
+    "iAm": "I am",
+    "description": "I am a full-stack developer passionate about creating robust and scalable systems, especially using Golang and Node.js. Although I also have experience in front-end development with React and Next.js, my main focus is on the back-end, ensuring efficiency, performance, and scalability in the applications I develop."
   }
 }

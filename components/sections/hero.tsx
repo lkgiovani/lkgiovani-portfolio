@@ -3,32 +3,37 @@ import { Facebook, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 
+const socialLinks = [
+  { Icon: Github, likes: "https://github.com/lkgiovani" },
+  { Icon: Linkedin, likes: "https://www.linkedin.com/in/lkgiovani/" },
+  { Icon: Mail, likes: "mailto:lkgiovani@gmail.com" },
+];
+
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section id="home" className="h-screen flex items-center relative ">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-5xl font-bold mb-4 text-foreground">
-            MD RIEAD MIA
+            {t("hero.about")}
           </h1>
           <h2 className="text-2xl mb-6 text-foreground ">
-            And I'm a <span className="text-primary">Frontend Developer</span>
+            {t("hero.iAm")}
+            <span className="text-primary"> Full-stack Developer</span>
           </h2>
-          <p className="text-gray-400 mb-8 max-w-xl">
-            I'm professional web developer with strong skill in HTML, CSS,
-            JavaScript, Tailwind, JQuery etc. I have working in this field
-            almost 3 years and all projects are complited successfully with 100%
-            client satisfiction.
-          </p>
+          <p className="text-gray-400 mb-8 max-w-xl">{t("hero.description")}</p>
 
           <div className="flex gap-4 mb-8">
-            {[Facebook, Github, Linkedin, Mail].map((Icon, index) => (
+            {socialLinks.map((Icon, index) => (
               <a
                 key={index}
-                href="#"
+                href={Icon.likes}
                 className="w-10 h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground "
+                target="_blank"
               >
-                <Icon className="w-5 h-5" />
+                <Icon.Icon className="w-5 h-5" />
               </a>
             ))}
           </div>
