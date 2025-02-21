@@ -38,7 +38,6 @@ export default function Home() {
         <Hero />
         <About />
         <Technologies />
-        {/* <Experience /> */}
         <PortfolioTimeline />
         <Contact />
       </main>
