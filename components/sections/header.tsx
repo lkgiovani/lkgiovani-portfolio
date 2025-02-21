@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Language } from "./Language";
-import ModeToggle from "./modeToggle";
+import { Language } from "../Language";
+import ModeToggle from "../modeToggle";
 
 type HeaderProps = {
   activeSection: string;

@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TranslationsProvider } from "@/provider/TranslationsProvider";
 import initTranslations from "../i18n";
-import { Language } from "@/components/Language";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +32,7 @@ export default async function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <head>
+        <Head>
           <meta charSet="utf-8" />
           <meta
             name="viewport"
@@ -40,7 +40,7 @@ export default async function RootLayout({
           />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-        </head>
+        </Head>
         <body
           className={`${inter.className}  bg-fixed  bg-gradient-to-t dark:from-primary/10  from-primary/15  to-background rounded-2xl p-4`}
         >

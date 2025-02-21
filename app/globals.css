@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  cursor: url("/bananaNormal.png"), auto !important;
+body {
+  cursor: url("../public/bananaNormal.png"), auto !important;
 }
 
 .hexagon-container {
@@ -27,6 +27,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+body {
+  --sb-track-color: #f0f0f0; /* Fundo claro */
+  --sb-thumb-color: #ff6b6b; /* Thumb vermelho claro */
+  --sb-size: 12px;
+}
+
+/* Scrollbar para Light Mode */
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+/* Scrollbar para Dark Mode */
+.dark body {
+  --sb-track-color: #09090f; /* Fundo escuro */
+  --sb-thumb-color: #f53543; /* Thumb vermelho mais forte */
 }
 
 @layer base {

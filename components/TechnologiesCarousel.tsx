@@ -3,17 +3,6 @@
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
-import {
-  Home,
-  Settings,
-  User,
-  Bell,
-  Mail,
-  Calendar,
-  FileText,
-  Music,
-  Video,
-} from "lucide-react";
 import Image from "next/image";
 
 const icons = [
@@ -59,21 +48,20 @@ const icons = [
   },
 ];
 
-// Duplica os ícones para criar um loop contínuo
 const allIcons = [...icons, ...icons, ...icons];
 
 function TechnologiesCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, dragFree: true },
-    [AutoScroll({ startDelay: 1 })] // AutoScroll ativado corretamente
+    [AutoScroll({ startDelay: 1 })]
   );
 
   const handleMouseEnter = useCallback(() => {
-    emblaApi?.plugins()?.autoScroll?.stop(); // Para o autoscroll ao passar o mouse
+    emblaApi?.plugins()?.autoScroll?.stop();
   }, [emblaApi]);
 
   const handleMouseLeave = useCallback(() => {
-    emblaApi?.plugins()?.autoScroll?.play(); // Retoma o autoscroll ao sair o mouse
+    emblaApi?.plugins()?.autoScroll?.play();
   }, [emblaApi]);
 
   useEffect(() => {
@@ -82,15 +70,14 @@ function TechnologiesCarousel() {
     const autoScroll = emblaApi.plugins()?.autoScroll;
     if (!autoScroll) return;
 
-    // Garante que o autoscroll está ativado no início
     autoScroll.play();
   }, [emblaApi]);
 
   return (
     <div
       className="w-full bg-background p-8"
-      onMouseEnter={handleMouseEnter} // Para ao entrar com o mouse
-      onMouseLeave={handleMouseLeave} // Volta ao sair com o mouse
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex p-2">
