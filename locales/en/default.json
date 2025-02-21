@@ -1,16 +1,39 @@
 {
   "header": {
     "nav": [
-      { "value": "home", "label": "Home" },
-      { "value": "about", "label": "About" },
-      { "value": "technologies", "label": "Technologies" },
-      { "value": "services", "label": "Timeline" },
-      { "value": "contact", "label": "Contact" }
+      {
+        "value": "home",
+        "label": "Home"
+      },
+      {
+        "value": "about",
+        "label": "About"
+      },
+      {
+        "value": "technologies",
+        "label": "Technologies"
+      },
+      {
+        "value": "services",
+        "label": "Timeline"
+      },
+      {
+        "value": "contact",
+        "label": "Contact"
+      }
     ]
   },
   "hero": {
     "about": "About me",
     "iAm": "I am",
     "description": "I am a full-stack developer passionate about creating robust and scalable systems, especially using Golang and Node.js. Although I also have experience in front-end development with React and Next.js, my main focus is on the back-end, ensuring efficiency, performance, and scalability in the applications I develop."
+  },
+  "about-me": {
+    "title": "About Me",
+    "title2": "Hello, I'm",
+    "description1": "Full-stack developer with experience in back-end and DevOps, focused on building scalable and high-performance systems. Primarily working with Golang and Node.js, with additional experience in front-end development using React and Next.js.",
+    "description2": "In back-end development, I have worked on projects ranging from simple CRUD applications to complex systems, applying query optimization in databases, particularly in MySQL (using NoCQL when needed). I have experience with various architectures, including MVC, Hexagonal, and Microservices.",
+    "description3": "In DevOps, I specialize in building and maintaining AWS-based solutions, with expertise in deploying serverless architectures in both Golang and Node.js, leveraging Lambda, DynamoDB, API Gateway, and S3 to ensure scalability and high availability.",
+    "title3": "My Skills Include"
   }
 }
