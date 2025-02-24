@@ -17,6 +17,7 @@ import {
   SiRedis,
   SiRust,
   SiPython,
+  SiReact,
 } from "react-icons/si";
 import { useTheme } from "next-themes";
 import {
@@ -104,6 +105,12 @@ const icon = [
     colorDark: "#FFD75E",
     colorLight: "#FFD75E",
   },
+  {
+    name: "React",
+    IconComponent: SiReact,
+    colorDark: "#61DAFB",
+    colorLight: "#61DAFB",
+  },
 ];
 
 const allIcons = [...icon, ...icon, ...icon];
@@ -113,7 +120,7 @@ function TechnologiesCarousel() {
   const isDarkMode = theme === "dark";
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, watchFocus: false },
+    { loop: true, watchFocus: false, active: true },
     [
       AutoScroll({
         startDelay: 2,
@@ -141,9 +148,9 @@ function TechnologiesCarousel() {
 
   return (
     <>
-      <div className="w-full p-2 ">
-        <div className="overflow-hidden  bg-blue-500 h-[200px]" ref={emblaRef}>
-          <div className="flex bg-red-600">
+      <div className="w-full p-2">
+        <div className="overflow-hidden h-[600px]" ref={emblaRef}>
+          <div className="flex">
             {allIcons.map((item, index) => {
               const IconComponent = item.IconComponent;
               return (
@@ -176,8 +183,17 @@ function TechnologiesCarousel() {
                         </div>
                       </div>
                     </HoverCardTrigger>
-                    <HoverCardContent className="absolute left-0 top-full z-50 w-max p-2 bg-background shadow-lg">
-                      Minha experiência com {item.name}
+                    <HoverCardContent className="flex flex-col gap-2 left-0 top-full p-4 bg-background shadow-lg  w-96 ">
+                      <h2 className="text-1xl text-foreground">
+                        Minha experiência com{" "}
+                        <span className="text-primary">{item.name}</span>
+                      </h2>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cupiditate tenetur soluta fugit ullam iste voluptatibus,
+                        amet odit vel ut harum esse non magni officia rerum
+                        voluptates perferendis maiores excepturi nobis.
+                      </p>
                     </HoverCardContent>
                   </HoverCard>
                 </div>
