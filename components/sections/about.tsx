@@ -25,21 +25,6 @@ export default function About() {
           <p className="text-foreground/80">{t("about-me.description1")}</p>
           <p className="text-foreground/80">{t("about-me.description2")}</p>
           <p className="text-foreground/80">{t("about-me.description3")}</p>
-          <div className="pt-4">
-            <h4 className="text-xl font-semibold text-primary mb-2">
-              {t("about-me.title3")}:
-            </h4>
-            <ul className="grid grid-cols-2 gap-2 text-foreground">
-              <li>• React & Next.js</li>
-              <li>• TypeScript</li>
-              <li>• Tailwind CSS</li>
-              <li>• RESTful APIs</li>
-              <li>• Git & Version Control</li>
-              <li>• Responsive Design</li>
-              <li>• Performance Optimization</li>
-              <li>• UI/UX Best Practices</li>
-            </ul>
-          </div>
         </div>
       </div>
     </Section>
