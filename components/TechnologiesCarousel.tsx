@@ -113,8 +113,6 @@ const icon = [
   },
 ];
 
-const allIcons = [...icon, ...icon, ...icon];
-
 function TechnologiesCarousel() {
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
@@ -151,7 +149,7 @@ function TechnologiesCarousel() {
       <div className="w-full p-2">
         <div className="overflow-hidden h-[600px]" ref={emblaRef}>
           <div className="flex">
-            {allIcons.map((item, index) => {
+            {icon.map((item, index) => {
               const IconComponent = item.IconComponent;
               return (
                 <div
