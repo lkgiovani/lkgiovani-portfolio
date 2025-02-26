@@ -1,0 +1,66 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About mi",
+      "technologies": "Technologies",
+      "services": "Timeline",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "about": "About me",
+    "iAm": "I am",
+    "description": "I am a full-stack developer passionate about creating robust and scalable systems, especially using Golang and Node.js. Although I also have experience in front-end development with React and Next.js, my main focus is on the back-end, ensuring efficiency, performance, and scalability in the applications I develop."
+  },
+  "about-me": {
+    "title": "About Me",
+    "title2": "Hello, I'm",
+    "description1": "Full-stack developer with experience in back-end and DevOps, focused on building scalable and high-performance systems. Primarily working with Golang and Node.js, with additional experience in front-end development using React and Next.js.",
+    "description2": "In back-end development, I have worked on projects ranging from simple CRUD applications to complex systems, applying query optimization in databases, particularly in MySQL (using NoCQL when needed). I have experience with various architectures, including MVC, Hexagonal, and Microservices.",
+    "description3": "In DevOps, I specialize in building and maintaining AWS-based solutions, with expertise in deploying serverless architectures in both Golang and Node.js, leveraging Lambda, DynamoDB, API Gateway, and S3 to ensure scalability and high availability.",
+    "title3": "My Skills Include"
+  },
+  "technologiesCarousel": {
+    "title": "Technologies",
+    "description": {
+      "default": "Not found",
+      "react": "I have experience with React in creating landing pages and complex web pages. I worked with componentization using ShadCN for modern UI and Framer Motion for animations. I developed interactive charts with Chart.js, Recharts, and D3.js and created dynamic forms with validation using React Hook Form and Zod. I always strive for best practices and optimization to improve the performance and usability of applications.",
+      "go": "An efficient and concise language for high-performance systems, with excellent concurrency.",
+      "javascript": "A widely used programming language for web development. It supports asynchronous programming and is essential for creating dynamic and interactive interfaces on both frontend and backend.",
+      "typescript": "A superset of JavaScript that adds static typing and advanced development features, making code safer and easier to maintain.",
+      "nextjs": "A React framework that enables hybrid rendering (SSR and SSG), advanced routing, and optimizations for better performance and SEO.",
+      "nodejs": "An asynchronous, event-driven JavaScript runtime, ideal for scalable backend development, REST APIs, and real-time applications.",
+      "aws_lambda": "AWS serverless computing service that allows running code without managing servers, charging only for execution time.",
+      "amazon_s3": "A scalable and secure AWS object storage service used for storing files, backups, and static content.",
+      "dynamodb": "An AWS NoSQL database with high availability and scalability, optimized for distributed data storage and performance.",
+      "postgresql": "An open-source relational database with strong SQL support, known for its reliability, extensibility, and performance.",
+      "mysql": "A popular relational database widely used for web applications and systems requiring structured storage and ACID transactions.",
+      "redis": "An extremely fast in-memory database used for caching, queues, and session storage to improve application performance.",
+      "rust": "A programming language focused on security, performance, and concurrency, widely used for low-level systems and high-performance applications.",
+      "python": "A versatile and easy-to-learn language used for web development, data science, automation, and artificial intelligence."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "logoAlt": "Logo",
+    "description": "I am a professional full-stack developer with expertise in creating robust web applications. With experience in both frontend and backend technologies, I can help bring your digital ideas to life with efficient, scalable solutions.",
+    "phone": "Phone",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "location": "Location",
+    "facebook": "Facebook",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "subject": "Subject",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "successMessage": "Thank you for your message. I'll get back to you soon!",
+      "errorMessage": "Something went wrong. Please try again."
+    }
+  }
+}

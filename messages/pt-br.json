@@ -1,0 +1,66 @@
+{
+  "header": {
+    "nav": {
+      "home": "Início",
+      "about": "Sobre mi",
+      "technologies": "Tecnologias",
+      "services": "Linha do tempo",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "about": "Sobre mim",
+    "iAm": "Eu sou",
+    "description": " Sou um desenvolvedor full-stack apaixonado por criar sistemasrobustos e escaláveis, especialmente utilizando Golang e Node.js.Embora também tenha experiência no desenvolvimento front-end com React e Next.js, minha principal atuação é no back-end, garantindo eficiência, performance e escalabilidade nas aplicações qudesenvolvo."
+  },
+  "about-me": {
+    "title": "Sobre mim",
+    "title2": "Olá, eu sou",
+    "description1": "Desenvolvedor full-stack com experiência em back-end e DevOps, atuando no desenvolvimento de sistemas escaláveis e de alta performance. Trabalho principalmente com Golang e Node.js, além de possuir conhecimento em front-end com React e Next.js.",
+    "description2": "No back-end, desenvolvi desde CRUDs simples até sistemas complexos, aplicando otimização de queries em bancos de dados, especialmente no MySQL (usando NoCQL quando necessário). Tenho experiência com diversas arquiteturas, incluindo MVC, Hexagonal e Microsserviços.",
+    "description3": "Em DevOps, atuo na criação e manutenção de soluções em AWS, com experiência na implementação de arquiteturas serverless tanto em Golang quanto em Node.js, utilizando Lambda, DynamoDB, API Gateway e S3, garantindo escalabilidade e alta disponibilidade.",
+    "title3": "Minhas habilidades incluem"
+  },
+  "technologiesCarousel": {
+    "title": "Tecnologias",
+    "description": {
+      "default": "Não encontrado",
+      "react": "Tenho experiência com React criando sites landing pages e páginas complexas Trabalhei com componentização utilizando ShadCN para UI moderna e Framer Motion para animações Desenvolvi gráficos interativos com Chartjs Recharts e D3js e criei formulários dinâmicos com validação usando React Hook Form e Zod Busco sempre boas práticas e otimização para melhorar a performance e usabilidade das aplicações",
+      "go": "Linguagem eficiente e concisa para sistemas de alta performance, com excelente concorrência",
+      "javascript": "Linguagem de programação amplamente utilizada para desenvolvimento web. Possui suporte a programação assíncrona e é essencial para criar interfaces dinâmicas e interativas no frontend e backend.",
+      "typescript": "Superset do JavaScript que adiciona tipagem estática e recursos avançados de desenvolvimento, tornando o código mais seguro e fácil de manter.",
+      "nextjs": "Framework para React que permite renderização híbrida (SSR e SSG), roteamento avançado e otimizações para melhor performance e SEO.",
+      "nodejs": "Runtime JavaScript assíncrono e baseado em eventos, ideal para desenvolvimento backend escalável, APIs REST e aplicações em tempo real.",
+      "aws_lambda": "Serviço de computação serverless da AWS que permite executar código sem gerenciar servidores, cobrando apenas pelo tempo de execução.",
+      "amazon_s3": "Serviço de armazenamento de objetos escalável e seguro da AWS, usado para armazenar arquivos, backups e conteúdo estático.",
+      "dynamodb": "Banco de dados NoSQL da AWS com alta disponibilidade e escalabilidade, utilizado para armazenar dados de forma distribuída e otimizada para performance.",
+      "postgresql": "Banco de dados relacional open-source com forte suporte a SQL, conhecido por sua confiabilidade, extensibilidade e desempenho.",
+      "mysql": "Banco de dados relacional popular, amplamente usado para aplicações web e sistemas que exigem armazenamento estruturado e transações ACID.",
+      "redis": "Banco de dados em memória extremamente rápido, utilizado para caching, filas e armazenamento de sessão para melhorar a performance de aplicações.",
+      "rust": "Linguagem de programação focada em segurança, desempenho e concorrência, muito utilizada em sistemas de baixo nível e aplicações de alta performance.",
+      "python": "Linguagem versátil e de fácil aprendizado, usada para desenvolvimento web, ciência de dados, automação e inteligência artificial."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "logoAlt": "Logo",
+    "description": "Sou um desenvolvedor full-stack profissional com experiência na criação de aplicações web robustas. Com conhecimento em tecnologias frontend e backend, posso ajudar a transformar suas ideias digitais em soluções eficientes e escaláveis.",
+    "phone": "Telefone",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "location": "Localização",
+    "facebook": "Facebook",
+    "form": {
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "phone": "Telefone",
+      "subject": "Assunto",
+      "email": "Email",
+      "message": "Mensagem",
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "successMessage": "Obrigado pela sua mensagem. Entrarei em contato em breve!",
+      "errorMessage": "Algo deu errado. Por favor, tente novamente."
+    }
+  }
+}
