@@ -35,5 +35,11 @@
     "description2": "No back-end, desenvolvi desde CRUDs simples até sistemas complexos, aplicando otimização de queries em bancos de dados, especialmente no MySQL (usando NoCQL quando necessário). Tenho experiência com diversas arquiteturas, incluindo MVC, Hexagonal e Microsserviços.",
     "description3": "Em DevOps, atuo na criação e manutenção de soluções em AWS, com experiência na implementação de arquiteturas serverless tanto em Golang quanto em Node.js, utilizando Lambda, DynamoDB, API Gateway e S3, garantindo escalabilidade e alta disponibilidade.",
     "title3": "Minhas habilidades incluem"
+  },
+  "technologiesCarousel": {
+    "description": {
+      "default": "Não encontrado",
+      "react": "Tenho experiência com React criando sites landing pages e páginas complexas Trabalhei com componentização utilizando ShadCN para UI moderna e Framer Motion para animações Desenvolvi gráficos interativos com Chartjs Recharts e D3js e criei formulários dinâmicos com validação usando React Hook Form e Zod Busco sempre boas práticas e otimização para melhorar a performance e usabilidade das aplicações"
+    }
   }
 }

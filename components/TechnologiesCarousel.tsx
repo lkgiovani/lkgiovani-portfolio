@@ -25,6 +25,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { useTranslation } from "react-i18next";
 
 const icon = [
   {
@@ -116,6 +117,7 @@ const icon = [
 function TechnologiesCarousel() {
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
+  const { t } = useTranslation();
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, watchFocus: false, active: true },
@@ -134,6 +136,10 @@ function TechnologiesCarousel() {
   const handleMouseLeave = useCallback(() => {
     emblaApi?.plugins()?.autoScroll?.play();
   }, [emblaApi]);
+
+  console.log(
+    t(`technologiesCarousel.description.salve`, { defaultValue: "salve" })
+  );
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -187,10 +193,14 @@ function TechnologiesCarousel() {
                         <span className="text-primary">{item.name}</span>
                       </h2>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Cupiditate tenetur soluta fugit ullam iste voluptatibus,
-                        amet odit vel ut harum esse non magni officia rerum
-                        voluptates perferendis maiores excepturi nobis.
+                        {t(
+                          `technologiesCarousel.description.${item.name.toLowerCase()}`,
+                          {
+                            defaultValue: t(
+                              `technologiesCarousel.description.default`
+                            ),
+                          }
+                        )}
                       </p>
                     </HoverCardContent>
                   </HoverCard>
