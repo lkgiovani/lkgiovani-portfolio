@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { US, BR, ES } from "country-flag-icons/react/3x2";
+import { US, BR, ES, FR, KR, RU } from "country-flag-icons/react/3x2";
 
 export interface OptionsParams {
   value: string;
@@ -37,6 +37,12 @@ function SwitchTranslator({ options, handleChange, value }: SwitcherProps) {
             <US className="h-[1.2rem] w-[1.2rem]" aria-label="English" />
           ) : value === "es" ? (
             <ES className="h-[1.2rem] w-[1.2rem]" aria-label="Español" />
+          ) : value === "fr" ? (
+            <FR className="h-[1.2rem] w-[1.2rem]" aria-label="Français" />
+          ) : value === "ko" ? (
+            <KR className="h-[1.2rem] w-[1.2rem]" aria-label="한국어" />
+          ) : value === "ru" ? (
+            <RU className="h-[1.2rem] w-[1.2rem]" aria-label="Русский" />
           ) : (
             <BR className="h-[1.2rem] w-[1.2rem]" aria-label="Português" />
           )}

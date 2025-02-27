@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { US, BR, ES } from "country-flag-icons/react/3x2";
+import { US, BR, ES, FR, KR, RU } from "country-flag-icons/react/3x2";
 import { useLocale } from "next-intl";
 import Cookies from "js-cookie";
 import SwitchTranslator from "../ui/switchTranslator";
@@ -26,6 +26,21 @@ export const Language = () => {
       value: "es",
       label: "Español",
       icon: <ES className="max-w-5" aria-label="España" />,
+    },
+    {
+      value: "fr",
+      label: "Français",
+      icon: <FR className="max-w-5" aria-label="France" />,
+    },
+    {
+      value: "ko",
+      label: "한국어",
+      icon: <KR className="max-w-5" aria-label="Korea" />,
+    },
+    {
+      value: "ru",
+      label: "Русский",
+      icon: <RU className="max-w-5" aria-label="Russia" />,
     },
   ];
 

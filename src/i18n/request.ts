@@ -1,7 +1,7 @@
 import { cookies, headers } from "next/headers";
 import { getRequestConfig } from "next-intl/server";
 
-const locales = ["pt-br", "en", "es", "de", "fr"];
+const locales = ["pt-br", "en", "es", "de", "fr", "ko", "ru"];
 const defaultLocale = "en";
 
 export default getRequestConfig(async () => {

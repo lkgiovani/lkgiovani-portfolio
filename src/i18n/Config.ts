@@ -36,6 +36,18 @@ export const languages: Language[] = [
     flag: "🇩🇪",
     region: "Deutschland",
   },
+  {
+    code: "ko",
+    name: "한국어",
+    flag: "🇰🇷",
+    region: "Korea",
+  },
+  {
+    code: "ru",
+    name: "Русский",
+    flag: "🇷🇺",
+    region: "Russia",
+  },
 ];
 
 export const defaultLocale = "pt";
