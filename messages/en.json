@@ -41,6 +41,36 @@
       "python": "A versatile and easy-to-learn language used for web development, data science, automation, and artificial intelligence."
     }
   },
+  "timeline": {
+    "title": "My Professional Journey",
+    "events": [
+      {
+        "date": "January 2020",
+        "title": "Computer Science Degree",
+        "description": "Graduated with honors, focusing on Artificial Intelligence and Web Development."
+      },
+      {
+        "date": "March 2020",
+        "title": "First Freelance Project",
+        "description": "Developed a complete e-commerce site for a local craft store."
+      },
+      {
+        "date": "September 2020",
+        "title": "Tech Startup Internship",
+        "description": "Worked in an agile team, developing features for a productivity app."
+      },
+      {
+        "date": "June 2021",
+        "title": "Personal App Launch",
+        "description": "Created and launched my first mobile app: a task organizer with over 10k downloads."
+      },
+      {
+        "date": "December 2021",
+        "title": "Technology Innovation Award",
+        "description": "Received a local award for innovative contributions to open source projects."
+      }
+    ]
+  },
   "contact": {
     "title": "Contact",
     "logoAlt": "Logo",

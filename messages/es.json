@@ -41,6 +41,36 @@
       "python": "Un lenguaje versátil y fácil de aprender, utilizado para desarrollo web, ciencia de datos, automatización e inteligencia artificial."
     }
   },
+  "timeline": {
+    "title": "Mi Trayectoria Profesional",
+    "events": [
+      {
+        "date": "Enero 2020",
+        "title": "Grado en Ciencias de la Computación",
+        "description": "Me gradué con honores, especializándome en Inteligencia Artificial y Desarrollo Web."
+      },
+      {
+        "date": "Marzo 2020",
+        "title": "Primer Proyecto Freelance",
+        "description": "Desarrollé un sitio completo de comercio electrónico para una tienda local de artesanía."
+      },
+      {
+        "date": "Septiembre 2020",
+        "title": "Prácticas en Startup de Tecnología",
+        "description": "Trabajé en un equipo ágil, desarrollando funcionalidades para una aplicación de productividad."
+      },
+      {
+        "date": "Junio 2021",
+        "title": "Lanzamiento de App Personal",
+        "description": "Creé y lancé mi primera aplicación móvil: un organizador de tareas con más de 10.000 descargas."
+      },
+      {
+        "date": "Diciembre 2021",
+        "title": "Premio a la Innovación Tecnológica",
+        "description": "Recibí un premio local por contribuciones innovadoras a proyectos de código abierto."
+      }
+    ]
+  },
   "contact": {
     "title": "Contacto",
     "logoAlt": "Logotipo",

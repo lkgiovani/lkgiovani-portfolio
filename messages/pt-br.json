@@ -2,7 +2,7 @@
   "header": {
     "nav": {
       "home": "Início",
-      "about": "Sobre mi",
+      "about": "Sobre mim",
       "technologies": "Tecnologias",
       "services": "Linha do tempo",
       "contact": "Contato"
@@ -40,6 +40,68 @@
       "rust": "Linguagem de programação focada em segurança, desempenho e concorrência, muito utilizada em sistemas de baixo nível e aplicações de alta performance.",
       "python": "Linguagem versátil e de fácil aprendizado, usada para desenvolvimento web, ciência de dados, automação e inteligência artificial."
     }
+  },
+  "timeline": {
+    "title": "Minha Jornada Profissional",
+    "events": [
+      {
+        "date": "Março 2020",
+        "title": "Primeiro Projeto Freelance",
+        "description": "Desenvolvi um site de e-commerce completo para uma loja local de artesanato.",
+        "icon": "code"
+      },
+      {
+        "date": "Setembro 2020",
+        "title": "Estágio em Startup de Tecnologia",
+        "description": "Trabalhei em uma equipe ágil, desenvolvendo features para um app de produtividade.",
+        "icon": "briefcase"
+      },
+      {
+        "date": "Junho 2021",
+        "title": "Lançamento de App Pessoal",
+        "description": "Criei e lancei meu primeiro aplicativo móvel: um organizador de tarefas com mais de 10k downloads.",
+        "icon": "code"
+      },
+      {
+        "date": "Dezembro 2021",
+        "title": "Prêmio de Inovação Tecnológica",
+        "description": "Recebi um prêmio local por contribuições inovadoras em projetos de código aberto.",
+        "icon": "award"
+      },
+      {
+        "date": "Novembro 2023",
+        "title": "Graduação em Análise e Desenvolvimento de Sistemas",
+        "description": "Concluí minha graduação na Universidade Católica de Brasília.",
+        "icon": "graduation"
+      },
+      {
+        "date": "Setembro 2023 - Setembro 2024",
+        "title": "Desenvolvedor Full Stack - Rizzo Dev",
+        "description": "Atuei como desenvolvedor full stack na Rizzo Dev, criando soluções escaláveis e eficientes.",
+        "especificacoes": [
+          "•Criação, integração e manutenção de páginas web com React e Next.js.",
+          "•Desenvolvimento e otimização do back-end com Express e Prisma.",
+          "•Criação de microserviços em Golang para cálculos pesados de estatísticas.",
+          "•Desenvolvimento de bots para Telegram.",
+          "•Scraping de páginas web utilizando Playwright.",
+          "•Criação de dashboards interativos com gráficos e tabelas responsivas.",
+          "•Desenvolvimento de front-ends com bastante real-time utilizando WebSockets e outras tecnologias."
+        ],
+        "icon": "briefcase"
+      },
+      {
+        "date": "Setembro 2024 - Presente",
+        "title": "Desenvolvedor Full Stack - Inside Code",
+        "description": "Atuando no desenvolvimento full-stack, resolução de problemas e banco de dados MySQL.",
+        "icon": "briefcase"
+      },
+      {
+        "date": "Janeiro 2024 - Junho 2025",
+        "title": "Pós-Graduação - MBA em Arquitetura Full Cycle",
+        "description": "Estudos avançados sobre arquitetura de software e sistemas escaláveis.",
+        "icon": "graduation"
+      }
+    ]
   },
   "contact": {
     "title": "Contato",
