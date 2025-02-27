@@ -8,11 +8,23 @@ import {
   Facebook,
   Send,
   Loader2,
+  Github,
 } from "lucide-react";
 
 import Section from "@/components/ui/section";
 import SectionTitle from "@/components/ui/section-title";
 import { useTranslations } from "next-intl";
+
+const socialLinks = [
+  { Icon: Github, likes: "https://github.com/lkgiovani" },
+  { Icon: Linkedin, likes: "https://www.linkedin.com/in/lkgiovani/" },
+  { Icon: Mail, likes: "mailto:lkgiovani@gmail.com" },
+  {
+    Icon: Phone,
+    likes:
+      "https://wa.me/5561984806923?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação.%20Poderia%20me%20passar%20mais%20informações?",
+  },
+];
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -63,57 +75,27 @@ export default function Contact() {
     <Section id="contact">
       <SectionTitle>{t("title")} </SectionTitle>
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        <div>
-          <Image
-            src="/baixados.jpg"
-            alt={t("logoAlt")}
-            width={150}
-            height={60}
-            className="mb-6"
-          />
-          <p className="text-foreground mb-8">{t("description")}</p>
-          <div className="flex gap-6">
-            <a
-              href="tel:+1234567890"
-              aria-label={t("phone")}
-              className="w-10 h-10 rounded-full text-foreground border border-primary/50 flex items-center justify-center hover:bg-primary/10 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-            </a>
-            <a
-              href="mailto:lkgiovani@gmail.com"
-              aria-label={t("email")}
-              className="w-10 h-10 rounded-full text-foreground border border-primary/50 flex items-center justify-center hover:bg-primary/10 transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/lkgiovani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("linkedin")}
-              className="w-10 h-10 rounded-full text-foreground border border-primary/50 flex items-center justify-center hover:bg-primary/10 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("location")}
-              className="w-10 h-10 rounded-full text-foreground border border-primary/50 flex items-center justify-center hover:bg-primary/10 transition-colors"
-            >
-              <MapPin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("facebook")}
-              className="w-10 h-10 rounded-full text-foreground border border-primary/50 flex items-center justify-center hover:bg-primary/10 transition-colors"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
+        <div className="flex flex-col gap-4">
+          <div className="w-full h-40 relative">
+            <Image
+              src="/go.png"
+              alt={t("logoAlt")}
+              layout="fill"
+              objectFit="cover"
+              className="mb-6"
+            />
+          </div>
+          <div className="flex justify-center w-full gap-6">
+            {socialLinks.map((Icon, index) => (
+              <a
+                key={index}
+                href={Icon.likes}
+                className="w-10 h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground "
+                target="_blank"
+              >
+                <Icon.Icon className="w-5 h-5" />
+              </a>
+            ))}
           </div>
         </div>
         <div>

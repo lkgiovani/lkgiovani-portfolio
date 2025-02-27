@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const socialLinks = [
   { Icon: Github, likes: "https://github.com/lkgiovani" },
@@ -43,16 +44,11 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className="relative">
-          <div className="hexagon-container">
-            <Image
-              src={`/baixados.jpg`}
-              alt="Profile"
-              width={400}
-              height={400}
-              className="hexagon-image"
-            />
-          </div>
+        <div className="flex justify-center items-center hexagon-container">
+          <Avatar className="w-[400px] h-[400px]">
+            <AvatarImage src="./eu.jpg" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         </div>
       </div>
     </section>

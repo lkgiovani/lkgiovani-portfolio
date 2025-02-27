@@ -38,7 +38,7 @@ const TimelineEvent = ({ event, index }: any) => {
     <motion.div
       ref={ref}
       style={{ opacity, scale, x }}
-      className={`mb-12 flex justify-between items-center w-full ${
+      className={`mb-16  flex justify-between items-center w-full ${
         index % 2 === 0 ? "flex-row-reverse left-timeline" : "right-timeline"
       }`}
     >
@@ -50,8 +50,7 @@ const TimelineEvent = ({ event, index }: any) => {
       >
         <Icon className="w-6 h-6 text-primary-foreground mx-auto" />
       </motion.div>
-
-      <HoverCard>
+      <HoverCard openDelay={50} closeDelay={50}>
         <HoverCardTrigger asChild>
           <motion.div
             className="order-1 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl w-5/12 px-6 py-4 backdrop-blur-sm bg-opacity-80"
@@ -74,9 +73,23 @@ const TimelineEvent = ({ event, index }: any) => {
             </div>
           </motion.div>
         </HoverCardTrigger>
-        <HoverCardContent align="center" side="bottom" className="w-[600px]">
-          {event.especificacoes}
-        </HoverCardContent>
+        {Array.isArray(event.specification) ? (
+          <HoverCardContent
+            align="center"
+            side="bottom"
+            className="w-[600px] bg-accent/20"
+          >
+            <div>
+              {event.specification.map((string: string) => {
+                return (
+                  <div>
+                    <h1>{string}</h1>
+                  </div>
+                );
+              })}
+            </div>
+          </HoverCardContent>
+        ) : null}
       </HoverCard>
     </motion.div>
   );
@@ -90,7 +103,7 @@ export default function PortfolioTimeline() {
     offset: ["start start", "end end"],
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "70%"]);
 
   // Get the translated timeline events
   const timelineEvents = t.raw("events") as Array<{
@@ -125,6 +138,7 @@ export default function PortfolioTimeline() {
             className="border-2-2 absolute border-primary h-full border"
             style={{
               left: "50%",
+              top: "10%",
               height: lineHeight,
               background: "linear-gradient(to bottom, #9333ea, #c084fc)",
             }}
