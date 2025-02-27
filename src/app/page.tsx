@@ -5,7 +5,7 @@ import Contact from "@/components/sections/contact";
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import Technologies from "@/components/sections/technologies";
-import PortfolioTimeline from "@/components/timeLine";
+import PortfolioTimeline from "@/components/sections/timeLine";
 import { useEffect, useState } from "react";
 
 export default function Home() {
