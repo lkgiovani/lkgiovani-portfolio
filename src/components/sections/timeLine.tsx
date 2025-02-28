@@ -79,7 +79,7 @@ const TimelineEvent = ({ event, index }: any) => {
             side="bottom"
             className="w-[600px] bg-accent/20"
           >
-            <div>
+            <div key={event.title}>
               {event.specification.map((string: string) => {
                 return (
                   <div>

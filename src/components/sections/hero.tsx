@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
           <h2 className="text-2xl mb-6 text-foreground ">
             {t("iAm")}
-            <span className="text-primary"> Full-stack Developer</span>
+            <span className="text-primary"> {t("position")}</span>
           </h2>
           <p className="text-gray-400 mb-8 max-w-xl">{t("description")}</p>
 

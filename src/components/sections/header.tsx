@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Language } from "../Language";
 import ModeToggle from "../modeToggle";
+import SVGComponent from "../logo";
 
 type HeaderProps = {
   activeSection: string;
@@ -31,7 +32,10 @@ export default function Header({ activeSection }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm  ">
       <nav className="container mx-auto px-4 py-6">
-        <div className="flex relative justify-end space-x-8 items-center ">
+        <div className="flex relative justify-center space-x-8 items-center">
+          <div className="absolute left-0">
+            <SVGComponent className="w-10 h-10" />
+          </div>
           <ul className="flex mx-auto gap-4">
             {navItems.map((item) => (
               <li key={item.value}>
