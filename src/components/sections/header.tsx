@@ -55,8 +55,6 @@ export default function Header({ activeSection }: HeaderProps) {
           <div className="flex items-center">
             <SVGComponent className="w-8 h-8 md:w-10 md:h-10" />
           </div>
-
-          {/* Mobile hamburger button */}
           <button
             className="block md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -93,7 +91,6 @@ export default function Header({ activeSection }: HeaderProps) {
           </div>
         </div>
 
-        {/* Mobile menu (overlay) */}
         {mobileMenuOpen && (
           <div className="md:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-sm z-40 animate-in fade-in slide-in-from-top duration-300 ">
             <ul className="flex bg-background/95 flex-col items-start space-y-6  pb-5">
