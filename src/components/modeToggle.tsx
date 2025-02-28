@@ -29,9 +29,13 @@ function ModeToggle({ showText = false }: ModeToggleProps) {
           {!showText && (
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           )}
-          {showText && <span className="text-lg  dark:hidden">Light</span>}
           {showText && (
-            <span className="text-lg   hidden dark:block">Dark</span>
+            <span className="text-lg  text-foreground dark:hidden">Light</span>
+          )}
+          {showText && (
+            <span className="text-lg text-foreground  hidden dark:block">
+              Dark
+            </span>
           )}
           <span className="sr-only">Toggle theme</span>
         </Button>
