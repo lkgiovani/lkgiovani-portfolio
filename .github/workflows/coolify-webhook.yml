@@ -1,34 +1,56 @@
 name: Coolify Webhook Trigger
 
 on:
-  pull_request:
-    branches: [main]
-    types: [closed]
+  push:
+    branches: [main, develop]
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "Ambiente para deploy"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - production
 
 jobs:
-  deploy-prd:
+  deploy-staging:
     runs-on: ubuntu-latest
-    environment: Production
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-
+    environment: Staging
+    if: github.event_name == 'closed' && github.ref == 'refs/heads/develop'
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Trigger Coolify Deploy
+      - name: Trigger Coolify Deploy (Staging)
         run: |
-          echo "Enviando requisição de deploy para Coolify..."
+          echo "Enviando requisição de deploy para Coolify (Staging)..."
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
             -X GET \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
-            "${{ secrets.COOLIFY_UUID }}api/v1/deploy?uuid=${{ secrets.COOLIFY_BASE_URL }}&force=${{ secrets.COOLIFY_FORCE_DEPLOY }}")
+            "${{ secrets.COOLIFY_BASE_URL }}/api/v1/deploy?uuid=${{ secrets.COOLIFY_UUID_STAGING }}&force=${{ secrets.COOLIFY_FORCE_DEPLOY || 'false' }}")
 
           if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 300 ]; then
-            echo "Deploy iniciado com sucesso! Status: $HTTP_STATUS"
+            echo "Deploy staging iniciado com sucesso! Status: $HTTP_STATUS"
           else
-            echo "Falha ao iniciar deploy. Status: $HTTP_STATUS"
+            echo "Falha ao iniciar deploy staging. Status: $HTTP_STATUS"
+            exit 1
+          fi
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: Production
+    if: github.event_name == 'closed' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Trigger Coolify Deploy (Production)
+        run: |
+          echo "Enviando requisição de deploy para Coolify (Production)..."
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X GET \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
+            "${{ secrets.COOLIFY_BASE_URL }}/api/v1/deploy?uuid=${{ secrets.COOLIFY_UUID }}&force=${{ secrets.COOLIFY_FORCE_DEPLOY || 'false' }}")
+
+          if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 300 ]; then
+            echo "Deploy production iniciado com sucesso! Status: $HTTP_STATUS"
+          else
+            echo "Falha ao iniciar deploy production. Status: $HTTP_STATUS"
             exit 1
           fi
