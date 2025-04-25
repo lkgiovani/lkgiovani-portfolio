@@ -35,7 +35,11 @@ jobs:
             console.log(`Enviando requisição de deploy para ${deployUrl}`);
 
             try {
-              const response = await axios.get(deployUrl);
+              const response = await axios.get(deployUrl, {
+                headers: {
+                  'Authorization': 'Bearer 1|ucxqam9OaI4SGTuNfmCeXvZ6NHrbs0McdeMfEFJb35beb3e1'
+                }
+              });
               
               console.log(`Status: ${response.status}`);
               console.log('Deploy iniciado com sucesso!');
