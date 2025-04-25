@@ -16,38 +16,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-
-      - name: Instalar dependências
-        run: npm install axios
-
       - name: Trigger Coolify Deploy
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const axios = require('axios');
+        run: |
+          echo "Enviando requisição de deploy para Coolify..."
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X GET \
+            -H "Authorization: Bearer 1|ucxqam9OaI4SGTuNfmCeXvZ6NHrbs0McdeMfEFJb35beb3e1" \
+            "https://dev.lkgiovani.com/api/v1/deploy?uuid=s8s0oksoks4c4s04ckckoggw&force=false")
 
-            const deployUrl = 'https://dev.lkgiovani.com/api/v1/deploy?uuid=s8s0oksoks4c4s04ckckoggw&force=false';
-
-            console.log(`Enviando requisição de deploy para ${deployUrl}`);
-
-            try {
-              const response = await axios.get(deployUrl, {
-                headers: {
-                  'Authorization': 'Bearer 1|ucxqam9OaI4SGTuNfmCeXvZ6NHrbs0McdeMfEFJb35beb3e1'
-                }
-              });
-              
-              console.log(`Status: ${response.status}`);
-              console.log('Deploy iniciado com sucesso!');
-            } catch (error) {
-              console.error('Erro ao iniciar deploy:', error.message);
-              if (error.response) {
-                console.error(`Status: ${error.response.status}`);
-                console.error('Response:', error.response.data);
-              }
-              core.setFailed('Falha ao iniciar deploy no Coolify');
-            }
+          if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 300 ]; then
+            echo "Deploy iniciado com sucesso! Status: $HTTP_STATUS"
+          else
+            echo "Falha ao iniciar deploy. Status: $HTTP_STATUS"
+            exit 1
+          fi
