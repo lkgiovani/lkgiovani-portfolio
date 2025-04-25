@@ -1,0 +1,96 @@
+name: Coolify Webhook Trigger
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, closed]
+  workflow_dispatch:
+    inputs:
+      event_type:
+        description: "Tipo de evento para simular"
+        required: true
+        default: "pull_request"
+        type: choice
+        options:
+          - pull_request
+
+jobs:
+  trigger-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Instalar dependências
+        run: npm install axios crypto
+
+      - name: Trigger Coolify Webhook
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const axios = require('axios');
+            const crypto = require('crypto');
+
+            const webhookUrl = 'https://dev.lkgiovani.com/webhooks/source/github/events/manual';
+            const secret = 'salve';
+
+            // Sempre será um evento de pull request
+            const eventType = 'pull_request';
+
+            // Cria um payload similar ao do GitHub
+            const payload = {
+              repository: {
+                name: context.repo.repo,
+                full_name: `${context.repo.owner}/${context.repo.repo}`,
+                owner: {
+                  login: context.repo.owner
+                }
+              },
+              pull_request: {
+                number: context.payload.pull_request?.number || 1,
+                state: context.payload.pull_request?.state || 'open',
+                title: context.payload.pull_request?.title || 'Pull Request para main',
+                base: {
+                  ref: 'main'
+                }
+              }
+            };
+
+            // Serializa o payload
+            const payloadString = JSON.stringify(payload);
+
+            // Cria a assinatura HMAC SHA-256, similar ao X-Hub-Signature do GitHub
+            const signature = crypto
+              .createHmac('sha256', secret)
+              .update(payloadString)
+              .digest('hex');
+
+            console.log(`Enviando webhook para ${webhookUrl}`);
+
+            try {
+              const response = await axios.post(webhookUrl, payload, {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-GitHub-Event': eventType,
+                  'X-Hub-Signature-256': `sha256=${signature}`,
+                  'X-GitHub-Delivery': crypto.randomUUID()
+                }
+              });
+              
+              console.log(`Status: ${response.status}`);
+              console.log('Webhook enviado com sucesso!');
+            } catch (error) {
+              console.error('Erro ao enviar webhook:', error.message);
+              if (error.response) {
+                console.error(`Status: ${error.response.status}`);
+                console.error('Response:', error.response.data);
+              }
+              core.setFailed('Falha ao enviar webhook para Coolify');
+            }
