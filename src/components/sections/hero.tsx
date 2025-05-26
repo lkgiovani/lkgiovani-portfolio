@@ -21,7 +21,7 @@ export default function Hero() {
   const t = useTranslations("hero");
 
   const handleDownload = (lang: string) => {
-    const fileUrl = lang === "pt" ? "/cv_pt_br.pdf" : "/cv_en.pdf";
+    const fileUrl = lang === "pt" ? "/currículo.pdf" : "/curriculum.pdf";
     const link = document.createElement("a");
     link.href = fileUrl;
     const fileName = fileUrl.split("/").pop() || "download.pdf";
