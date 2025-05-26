@@ -61,7 +61,6 @@ export const Language = ({ type = "icon" }: ToggleLanguageProps) => {
               ) : (
                 <BR className="h-[1.2rem] w-[1.2rem]" aria-label="Português" />
               )}
-              <span>{currentLang.flag}</span>
             </>
           ) : (
             <span className="text-foreground text-lg">{currentLang.name}</span>
