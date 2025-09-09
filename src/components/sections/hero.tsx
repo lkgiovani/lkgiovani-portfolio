@@ -79,7 +79,7 @@ export default function Hero() {
         </div>
         <div className="flex justify-center items-center ">
           <Avatar className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
-            <AvatarImage src="./eu.jpg" alt="Giovani Souza" />
+            <AvatarImage src="./eu.png" alt="Giovani Souza" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>
         </div>
