@@ -2,101 +2,103 @@
   "header": {
     "nav": {
       "home": "Home",
-      "about": "About mi",
+      "about": "About Me",
       "technologies": "Technologies",
       "services": "Timeline",
       "contact": "Contact"
     }
   },
   "hero": {
-    "about": "About me",
+    "about": "About Me",
     "iAm": "I am",
-    "position": "Full-stack Developer",
-    "description": "I am a full-stack developer passionate about creating robust and scalable systems, especially using Golang and Node.js. Although I also have experience in front-end development with React and Next.js, my main focus is on the back-end, ensuring efficiency, performance, and scalability in the applications I develop."
+    "position": "Software Engineer",
+    "description": "I am a software engineer with a primary focus on back-end development. I have solid experience building scalable and distributed services using Golang and Node.js, applying microservices, messaging (Kafka, SQS), and relational and NoSQL databases. I also have knowledge of front-end development with React and Next.js, but my main expertise is back-end, ensuring performance and resilience."
   },
   "about-me": {
     "title": "About Me",
-    "title2": "Hello, I'm",
-    "description1": "Full-stack developer with experience in back-end and DevOps, focused on building scalable and high-performance systems. Primarily working with Golang and Node.js, with additional experience in front-end development using React and Next.js.",
-    "description2": "In back-end development, I have worked on projects ranging from simple CRUD applications to complex systems, applying query optimization in databases, particularly in MySQL (using NoCQL when needed). I have experience with various architectures, including MVC, Hexagonal, and Microservices.",
-    "description3": "In DevOps, I specialize in building and maintaining AWS-based solutions, with expertise in deploying serverless architectures in both Golang and Node.js, leveraging Lambda, DynamoDB, API Gateway, and S3 to ensure scalability and high availability.",
-    "title3": "My Skills Include"
+    "title2": "Hello, I am",
+    "description1": "Software Engineer specialized in back-end, with experience in scalable, distributed, and high-performance systems. I mainly work with Golang and Node.js, but I also have knowledge of front-end with React and Next.js.",
+    "description2": "In back-end, I have built robust APIs, microservices, and messaging pipelines using Kafka and SQS. I have strong experience with relational databases (MySQL, PostgreSQL, Aurora) and NoSQL databases (DynamoDB, MongoDB, Redis). I apply software engineering best practices such as SOLID, Clean Code, and Design Patterns.",
+    "description3": "In addition to back-end, I have complementary experience in DevOps practices, using CI/CD, Docker, Kubernetes, and AWS services to support scalability and availability.",
+    "title3": "My skills include"
   },
   "technologiesCarousel": {
     "title": "Technologies",
     "description": {
       "default": "Not found",
-      "react": "I have experience with React in creating landing pages and complex web pages. I worked with componentization using ShadCN for modern UI and Framer Motion for animations. I developed interactive charts with Chart.js, Recharts, and D3.js and created dynamic forms with validation using React Hook Form and Zod. I always strive for best practices and optimization to improve the performance and usability of applications.",
-      "go": "An efficient and concise language for high-performance systems, with excellent concurrency.",
-      "javascript": "A widely used programming language for web development. It supports asynchronous programming and is essential for creating dynamic and interactive interfaces on both frontend and backend.",
-      "typescript": "A superset of JavaScript that adds static typing and advanced development features, making code safer and easier to maintain.",
-      "nextjs": "A React framework that enables hybrid rendering (SSR and SSG), advanced routing, and optimizations for better performance and SEO.",
-      "nodejs": "An asynchronous, event-driven JavaScript runtime, ideal for scalable backend development, REST APIs, and real-time applications.",
-      "aws_lambda": "AWS serverless computing service that allows running code without managing servers, charging only for execution time.",
-      "amazon_s3": "A scalable and secure AWS object storage service used for storing files, backups, and static content.",
-      "dynamodb": "An AWS NoSQL database with high availability and scalability, optimized for distributed data storage and performance.",
-      "postgresql": "An open-source relational database with strong SQL support, known for its reliability, extensibility, and performance.",
-      "mysql": "A popular relational database widely used for web applications and systems requiring structured storage and ACID transactions.",
-      "redis": "An extremely fast in-memory database used for caching, queues, and session storage to improve application performance.",
-      "rust": "A programming language focused on security, performance, and concurrency, widely used for low-level systems and high-performance applications.",
-      "python": "A versatile and easy-to-learn language used for web development, data science, automation, and artificial intelligence."
+      "react": "Experience with React and Next.js for building modern interfaces, supporting full-stack projects.",
+      "go": "Primary language for back-end and high-performance microservices development, with excellent concurrency support.",
+      "javascript": "Core web development language, used in both front-end and back-end.",
+      "typescript": "Static typing to improve safety and scalability in Node.js and front-end projects.",
+      "nextjs": "React framework with SSR/SSG, used in front-end support projects.",
+      "nodejs": "Essential runtime for scalable back-end, REST APIs, and distributed integrations.",
+      "aws_lambda": "Serverless execution on AWS for scalable applications.",
+      "amazon_s3": "Scalable and secure object storage for files and static content.",
+      "dynamodb": "AWS NoSQL database, optimized for scalability and low latency.",
+      "postgresql": "Reliable and robust relational database, with strong support for complex queries.",
+      "mysql": "Widely used relational database for web applications, with support for transactions and high consistency.",
+      "redis": "In-memory database for caching, queues, and sessions, improving performance.",
+      "rust": "High-performance and memory-safe language, used in critical systems.",
+      "python": "Versatile language for automation, data analysis, and service support.",
+      "kafka": "Distributed messaging platform for real-time event processing.",
+      "docker": "Essential tool for containerization and environment standardization.",
+      "kubernetes": "Container orchestration for high availability and scalability."
     }
   },
   "timeline": {
     "title": "My Professional Journey",
     "events": [
       {
-        "date": "February 2022 - November 2023",
-        "title": "Bachelor's Degree in Systems Analysis and Development",
-        "description": "Completed my bachelor's degree at Universidade Católica de Brasília.",
+        "date": "March 2022 - November 2023",
+        "title": "Bachelor’s Degree in Systems Analysis and Development",
+        "description": "Completed my degree at the Catholic University of Brasília.",
         "specification": [
-          "• Knowledge of agile methodologies, such as Scrum and agile development.",
-          "• Fundamentals of Database Administration (DBA).",
-          "• Algorithms and data structures.",
-          "• Object-Oriented Programming (OOP).",
-          "• Software Engineering principles and best development practices."
+          "• Agile methodologies such as Scrum.",
+          "• Database fundamentals.",
+          "• Algorithms and Data Structures.",
+          "• Object-Oriented Programming.",
+          "• Software Engineering and best practices."
         ],
         "icon": "graduation"
       },
       {
-        "date": "January 2023 - June 2024",
+        "date": "September 2023 - September 2024",
         "title": "Software Engineer - Rizzo Dev",
-        "description": "Worked as a full-stack developer at Rizzo Dev, building scalable and efficient solutions.",
+        "description": "Worked as a full-stack developer, mainly focused on back-end with some front-end support.",
         "specification": [
-          "• Creation, integration, and maintenance of web pages using React and Next.js.",
-          "• Backend development and optimization with Express and Prisma.",
-          "• Development of microservices in Golang for heavy statistical calculations.",
-          "• Development of bots for Telegram.",
-          "• Web scraping using Playwright.",
-          "• Creation of interactive dashboards with responsive charts and tables.",
-          "• Development of front-end applications with real-time features using WebSockets and other technologies."
+          "• Back-end development with Node.js and MySQL.",
+          "• Created services in Golang for data analysis.",
+          "• Used Redis for caching and optimization.",
+          "• Built CI/CD pipelines.",
+          "• Web scraping and large-scale data analysis.",
+          "• Supported front-end development with React and Next.js."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "July 2024 - Present",
+        "date": "September 2024 - Present",
         "title": "Software Engineer - Inside Code",
-        "description": "Working on back-end development and DevOps, creating scalable services and efficient architectures.",
+        "description": "Main focus on back-end, developing scalable and distributed services.",
         "specification": [
-          "• Backend development, building scalable services and APIs in Golang.",
-          "• Implementation and maintenance of MySQL and DynamoDB databases.",
-          "• Construction of CI/CD pipelines for deployment automation.",
-          "• Development of serverless solutions with AWS Lambda.",
-          "• Configuration of API Gateway, S3, EC2, and CloudFront to optimize performance and security.",
-          "• Monitoring and optimization of AWS infrastructure."
+          "• Built services and APIs with Golang and Node.js.",
+          "• Implemented messaging with Kafka and SQS.",
+          "• Database modeling and microservice integrations.",
+          "• Created CI/CD pipelines and deployment automation.",
+          "• Used Docker and Kubernetes to standardize environments.",
+          "• AWS infrastructure (Lambda, API Gateway, EC2, S3, VPC, CloudFront)."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "January 2024 - June 2025",
+        "date": "January 2025 - June 2026",
         "title": "Postgraduate - MBA in Full Cycle Architecture",
-        "description": "Advanced studies on software architecture and scalable systems.",
+        "description": "Advanced studies in software architecture and distributed systems.",
         "specification": [
-          "• Design and implementation of scalable and distributed architectures.",
-          "• Software architecture patterns, such as microservices and event-driven architecture.",
-          "• Best practices in DevOps, CI/CD, and automation.",
-          "• Management and optimization of cloud infrastructure.",
-          "• Strategies for scalability and security in modern applications."
+          "• Distributed and scalable architectures.",
+          "• Microservices and event-driven architecture.",
+          "• DevOps and CI/CD.",
+          "• Cloud and high availability strategies.",
+          "• Security and best practices in modern applications."
         ],
         "icon": "graduation"
       }
@@ -105,7 +107,7 @@
   "contact": {
     "title": "Contact",
     "logoAlt": "Logo",
-    "description": "I am a professional full-stack developer with expertise in creating robust web applications. With experience in both frontend and backend technologies, I can help bring your digital ideas to life with efficient, scalable solutions.",
+    "description": "Get in touch",
     "phone": "Phone",
     "email": "Email",
     "linkedin": "LinkedIn",
@@ -117,9 +119,9 @@
       "subject": "Subject",
       "email": "Email",
       "message": "Message",
-      "submit": "Submit",
-      "submitting": "Submitting...",
-      "successMessage": "Thank you for your message. I'll get back to you soon!",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "successMessage": "Thank you for your message. I will get back to you soon!",
       "errorMessage": "Something went wrong. Please try again."
     }
   }
