@@ -32,7 +32,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="h-screen flex items-center relative mt-10">
+    <section id="home" className="h-screen flex items-center relative">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-foreground">

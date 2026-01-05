@@ -161,7 +161,7 @@ export default function PortfolioTimeline() {
 
   return (
     <Section id="services">
-      <div ref={ref} className="container mx-auto px-4 py-16 min-h-screen">
+      <div ref={ref} className="container mx-auto px-4 py-8 min-h-screen">
         <motion.h2
           className="text-4xl font-bold text-foreground text-center mb-12"
           initial={{ opacity: 0, y: -50 }}
