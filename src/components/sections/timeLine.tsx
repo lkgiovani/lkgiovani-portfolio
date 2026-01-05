@@ -1,13 +1,20 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Calendar, Code, Briefcase, GraduationCap, Award } from "lucide-react";
-import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
+import {
+  Calendar,
+  Code,
+  Briefcase,
+  GraduationCap,
+  Award,
+  ChevronDown,
+} from "lucide-react";
+import { useRef, useState } from "react";
 import Section from "../ui/section";
 import { useTranslations } from "next-intl";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 
 const iconMap = {
   graduation: GraduationCap,
@@ -19,6 +26,7 @@ const iconMap = {
 
 const TimelineEvent = ({ event, index }: any) => {
   const ref = useRef(null);
+  const [isExpanded, setIsExpanded] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center center"],
@@ -33,6 +41,14 @@ const TimelineEvent = ({ event, index }: any) => {
   );
 
   const Icon = iconMap[event.icon as keyof typeof iconMap] || Calendar;
+  const hasSpecification =
+    Array.isArray(event.specification) && event.specification.length > 0;
+
+  const toggleExpanded = () => {
+    if (hasSpecification) {
+      setIsExpanded(!isExpanded);
+    }
+  };
 
   return (
     <motion.div
@@ -50,53 +66,67 @@ const TimelineEvent = ({ event, index }: any) => {
       {/* Hide this div on mobile */}
       <div className="order-1 w-5/12 hidden md:block"></div>
       <motion.div
-        className="z-20 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full sm:mx-0 mx-auto mb-3 sm:mb-0"
+        className="z-20 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full sm:mx-0 mb-3 sm:mb-0 -ml-6 sm:ml-0"
         whileHover={{ scale: 1.2, rotate: 360 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       >
         <Icon className="w-6 h-6 text-primary-foreground mx-auto" />
       </motion.div>
-      <HoverCard openDelay={50} closeDelay={50}>
-        <HoverCardTrigger asChild>
-          <motion.div
-            className="order-1 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl md:w-5/12 w-full sm:w-10/12 px-6 py-4 backdrop-blur-sm bg-opacity-80"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 20px rgba(183, 36, 73, 10)",
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <div>
-              <h3 className="mb-3 font-bold text-foreground text-xl">
-                {event.title}
-              </h3>
-              <p className="text-sm leading-snug tracking-wide text-foreground text-opacity-100">
-                {event.description}
-              </p>
-              <p className="mt-2 text-xs text-foreground font-semibold">
-                {event.date}
-              </p>
-            </div>
-          </motion.div>
-        </HoverCardTrigger>
-        {Array.isArray(event.specification) ? (
-          <HoverCardContent
-            align="center"
-            side="bottom"
-            className="w-full max-w-[600px] bg-accent/20"
-          >
-            <div key={event.title}>
-              {event.specification.map((string: string, idx: number) => {
-                return (
-                  <div key={idx}>
-                    <h1>{string}</h1>
+      <motion.div
+        className={`order-1 md:w-5/12 w-full sm:w-10/12 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl px-6 py-4 backdrop-blur-sm bg-opacity-80 ${
+          hasSpecification ? "cursor-pointer" : ""
+        }`}
+        whileHover={{
+          scale: 1.05,
+          boxShadow: "0 0 20px rgba(183, 36, 73, 10)",
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        onClick={toggleExpanded}
+        onMouseEnter={() => hasSpecification && setIsExpanded(true)}
+        onMouseLeave={() => hasSpecification && setIsExpanded(false)}
+      >
+        <div>
+          <div className="flex items-center justify-between">
+            <h3 className="mb-3 font-bold text-foreground text-xl">
+              {event.title}
+            </h3>
+            {hasSpecification && (
+              <motion.div
+                animate={{ rotate: isExpanded ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown className="w-5 h-5 text-foreground" />
+              </motion.div>
+            )}
+          </div>
+          <p className="text-sm leading-snug tracking-wide text-foreground text-opacity-100">
+            {event.description}
+          </p>
+          <p className="mt-2 text-xs text-foreground font-semibold">
+            {event.date}
+          </p>
+
+          <AnimatePresence>
+            {isExpanded && hasSpecification && (
+              <motion.div
+                initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                animate={{ height: "auto", opacity: 1, marginTop: 16 }}
+                exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden border-t border-primary/20 pt-4"
+              >
+                {event.specification.map((string: string, idx: number) => (
+                  <div key={idx} className="mb-2 last:mb-0">
+                    <p className="text-sm text-foreground leading-relaxed">
+                      {string}
+                    </p>
                   </div>
-                );
-              })}
-            </div>
-          </HoverCardContent>
-        ) : null}
-      </HoverCard>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };

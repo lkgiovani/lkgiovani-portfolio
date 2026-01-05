@@ -12,7 +12,7 @@
     "about": "Sobre mim",
     "iAm": "Eu sou",
     "position": "Software Engineer",
-    "description": "Sou um engenheiro de software com foco principal em back-end. Tenho experiência sólida no desenvolvimento de serviços escaláveis e distribuídos com Golang e Node.js, aplicando microsserviços, mensageria (Kafka, SQS) e bancos de dados relacionais e NoSQL. Também possuo conhecimento em front-end com React e Next.js, mas minha atuação central é no back-end, garantindo performance e resiliência."
+    "description": "Engenheiro de Software com experiência em desenvolvimento back-end utilizando Golang e Node.js (TypeScript / bun.js). Atuação no desenho e implementação de sistemas distribuídos, escaláveis e de alta desempenho, com foco em processamento em tempo real, microsserviços e arquitetura event-driven. Experiência prática com mensageira (Amazon SQS, Kafka), observabilidade e DevOps (CI/CD, Docker, Kubernetes, AWS), atuando em sistemas de jogos e plataformas de dados. Forte foco em arquitetura de software e boas práticas de engenharia (SOLID, Clean Code, Design Patterns)."
   },
   "about-me": {
     "title": "Sobre mim",
@@ -62,30 +62,33 @@
         "icon": "graduation"
       },
       {
-        "date": "janeiro 2023 - setembro 2024",
-        "title": "Software Engineer - Rizzo Dev",
-        "description": "Atuei como desenvolvedor full stack, com foco no back-end e apoio no front-end.",
+        "date": "janeiro 2023 - junho 2024",
+        "title": "Desenvolvedor Full Stack - Rizzo Dev",
+        "description": "Desenvolvimento e evolução de aplicações web responsivas com foco em dashboards e visualização de dados em tempo real.",
         "specification": [
-          "• Desenvolvimento de back-end com Node.js e MySQL.",
-          "• Criação de serviços em Golang para análise de dados.",
-          "• Uso de Redis para caching e otimização.",
-          "• Criação de pipelines de CI/CD.",
-          "• Scraping e análise de grandes volumes de dados.",
-          "• Apoio em front-end com React e Next.js."
+          "• Desenvolvimento de aplicações web com React e Next.js para dashboards e visualização de dados em tempo real.",
+          "• Construção de back-end em microsserviços com Node.js + TypeScript integrado via API Gateway.",
+          "• Implementação de serviços em Go para processamento de dados em tempo real, backtesting e notificações.",
+          "• Desenvolvimento de web scraping em TypeScript para coleta e processamento de dados de NFTs e tokens.",
+          "• Otimização de desempenho e latência com Redis para cache e processamento concorrente.",
+          "• Ambiente conteinerizado com Docker e pipelines de CI/CD para build, testes e deploy automatizado."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "julho 2024 - Presente",
+        "date": "junho 2024 - Presente",
         "title": "Software Engineer - Inside Code",
-        "description": "Atuação principal em back-end, desenvolvendo serviços escaláveis e distribuídos.",
+        "description": "Atuação em arquiteturas serverless na AWS, desenvolvendo game servers e serviços distribuídos com arquitetura event-driven.",
         "specification": [
-          "• Criação de serviços e APIs em Golang e Node.js.",
-          "• Implementação de mensageria com Kafka e SQS.",
-          "• Modelagem de banco de dados e integrações entre microsserviços.",
-          "• Criação de pipelines de CI/CD e automação de deploys.",
-          "• Uso de Docker e Kubernetes como apoio para padronização de ambientes.",
-          "• Infraestrutura em AWS (Lambda, API Gateway, EC2, S3, VPC, CloudFront)."
+          "• Arquiteturas serverless na AWS (API Gateway, Lambda, DynamoDB, RDS, S3, EC2, SQS, EventBridge, Firehose, VPC, Route 53).",
+          "• Desenvolvimento e modernização de game servers em Go com arquitetura event-driven para processamento em tempo real.",
+          "• Implementação de back-ends robustos e APIs RESTful com Golang e Node.js integrados a serviços distribuídos.",
+          "• Gerenciamento de estado e sessão de usuários com Redis para alta disponibilidade e mobilidade entre servidores.",
+          "• Uso de PostgreSQL (RDS) para dados relacionais e DynamoDB para gerenciamento de usuários e dados de alta escala.",
+          "• Orquestração de processamento assíncrono e filas distribuídas com Amazon SQS e EventBridge.",
+          "• Criação de pipelines de dados e data lake com Firehose e S3 para coleta de eventos e métricas.",
+          "• Produção de diagramas UML, modelagem de banco de dados e definição de fluxos de integração entre microserviços.",
+          "• Aplicação de padrões avançados de engenharia de software com testes unitários, de integração e carga."
         ],
         "icon": "briefcase"
       },

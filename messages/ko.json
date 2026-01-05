@@ -9,96 +9,99 @@
     }
   },
   "hero": {
-    "about": "저에 대해",
+    "about": "소개",
     "iAm": "저는",
-    "position": "Software Engineer",
-    "description": "저는 백엔드에 주력하는 소프트웨어 엔지니어입니다. Golang과 Node.js를 사용한 확장 가능하고 분산된 서비스 개발에서 견고한 경험을 가지고 있으며, 마이크로서비스, 메시징(Kafka, SQS) 및 관계형과 NoSQL 데이터베이스를 적용합니다. React와 Next.js를 사용한 프론트엔드 지식도 보유하고 있지만, 제 핵심 업무는 성능과 복원력을 보장하는 백엔드입니다."
+    "position": "소프트웨어 엔지니어",
+    "description": "Golang 및 Node.js(TypeScript / bun.js)를 활용한 백엔드 개발 경험을 보유한 소프트웨어 엔지니어입니다. 실시간 처리, 마이크로서비스, 이벤트 기반 아키텍처에 중점을 두고 분산형, 확장 가능, 고성능 시스템을 설계 및 구현해왔습니다. 메시징(Amazon SQS, Kafka), 관측 가능성(Observability), DevOps(CI/CD, Docker, Kubernetes, AWS)에 대한 실무 경험이 있으며, 게임 시스템과 데이터 플랫폼 환경에서 업무를 수행했습니다. 소프트웨어 아키텍처와 엔지니어링 모범 사례(SOLID, Clean Code, Design Patterns)에 강한 집중을 가지고 있습니다."
   },
   "about-me": {
     "title": "소개",
     "title2": "안녕하세요, 저는",
-    "description1": "백엔드 전문 소프트웨어 엔지니어로, 확장 가능하고 분산된 고성능 시스템에 대한 경험을 가지고 있습니다. 주로 Golang과 Node.js로 작업하며, React와 Next.js를 사용한 프론트엔드 지식도 보유하고 있습니다.",
-    "description2": "백엔드에서 강력한 API, 마이크로서비스 및 Kafka와 SQS를 사용한 메시징 파이프라인을 개발했습니다. 관계형 데이터베이스(MySQL, PostgreSQL, Aurora)와 NoSQL(DynamoDB, MongoDB, Redis)에 대한 강력한 경험을 가지고 있습니다. SOLID, Clean Code 및 Design Patterns와 같은 소프트웨어 엔지니어링 모범 사례를 적용합니다.",
-    "description3": "백엔드 외에도 DevOps 관행에 대한 보완적인 경험을 가지고 있으며, CI/CD, Docker, Kubernetes 및 AWS 서비스를 사용하여 시스템의 확장성과 가용성을 지원합니다.",
-    "title3": "내 기술에는 다음이 포함됩니다"
+    "description1": "백엔드 전문 소프트웨어 엔지니어로서 확장 가능하고 분산된 고성능 시스템 경험을 보유하고 있습니다. 주로 Golang과 Node.js를 사용하며, React 및 Next.js 기반의 프론트엔드 지식도 갖추고 있습니다.",
+    "description2": "백엔드에서는 Kafka와 SQS를 활용한 견고한 API, 마이크로서비스, 메시징 파이프라인을 구축했습니다. 관계형 데이터베이스(MySQL, PostgreSQL, Aurora)와 NoSQL(DynamoDB, MongoDB, Redis)에 대한 강한 경험이 있으며, SOLID, Clean Code, Design Patterns 같은 소프트웨어 엔지니어링 모범 사례를 적용합니다.",
+    "description3": "또한 CI/CD, Docker, Kubernetes 및 AWS 서비스를 활용한 DevOps 실무 경험을 통해 시스템의 확장성과 가용성을 지원해왔습니다.",
+    "title3": "주요 역량"
   },
   "technologiesCarousel": {
     "title": "기술",
     "description": {
       "default": "찾을 수 없음",
-      "react": "현대적인 인터페이스 생성을 위한 React와 Next.js 경험으로, 풀스택 프로젝트에서 지원 역할을 담당합니다.",
-      "go": "백엔드 개발과 고성능 마이크로서비스를 위한 주요 언어로, 뛰어난 동시성 지원을 제공합니다.",
-      "javascript": "웹 개발의 기초로, 프론트엔드와 백엔드 모두에서 사용됩니다.",
-      "typescript": "Node.js와 프론트엔드 프로젝트에서 보안과 확장성을 높이기 위한 정적 타이핑입니다.",
-      "nextjs": "SSR/SSG를 지원하는 React 프레임워크로, 프론트엔드 지원 프로젝트에서 사용됩니다.",
-      "nodejs": "확장 가능한 백엔드, REST API 및 분산 통합을 위한 필수 런타임입니다.",
-      "aws_lambda": "확장 가능한 애플리케이션을 위한 AWS의 서버리스 실행입니다.",
-      "amazon_s3": "파일과 정적 콘텐츠를 위한 확장 가능하고 안전한 객체 스토리지입니다.",
-      "dynamodb": "확장성과 낮은 지연시간에 최적화된 AWS NoSQL 데이터베이스입니다.",
-      "postgresql": "복잡한 쿼리를 강력하게 지원하는 신뢰할 수 있고 견고한 관계형 데이터베이스입니다.",
-      "mysql": "웹 애플리케이션에서 널리 사용되는 관계형 데이터베이스로, 트랜잭션과 높은 일관성을 지원합니다.",
-      "redis": "캐시, 큐 및 세션에 사용되는 인메모리 데이터베이스로, 성능을 최적화합니다.",
-      "rust": "중요한 시나리오에서 사용되는 고성능과 보안을 제공하는 언어입니다.",
-      "python": "자동화, 데이터 분석 및 서비스 지원에 사용되는 다목적 언어입니다.",
+      "react": "React 및 Next.js 경험을 바탕으로 현대적인 UI를 구축하며, 풀스택 프로젝트에서 지원 역할을 수행했습니다.",
+      "go": "고성능 백엔드 및 마이크로서비스 개발의 주력 언어로, 뛰어난 동시성 지원을 제공합니다.",
+      "javascript": "웹 개발의 기반 언어로, 프론트엔드와 백엔드 모두에서 사용합니다.",
+      "typescript": "정적 타입을 통해 Node.js 및 프론트엔드 프로젝트의 안정성과 확장성을 높입니다.",
+      "nextjs": "SSR/SSG를 지원하는 React 프레임워크로, 프론트엔드 프로젝트에서 보조적으로 활용했습니다.",
+      "nodejs": "확장 가능한 백엔드, REST API 및 분산 통합을 위한 핵심 런타임입니다.",
+      "aws_lambda": "AWS에서 서버리스 실행을 통해 확장 가능한 애플리케이션을 구현합니다.",
+      "amazon_s3": "파일 및 정적 콘텐츠를 위한 확장 가능하고 안전한 오브젝트 스토리지입니다.",
+      "dynamodb": "확장성과 낮은 지연 시간을 위해 최적화된 AWS NoSQL 데이터베이스입니다.",
+      "postgresql": "복잡한 쿼리를 강력하게 지원하는 신뢰성 높은 관계형 데이터베이스입니다.",
+      "mysql": "트랜잭션 지원과 높은 일관성을 제공하는, 웹 애플리케이션에서 널리 사용되는 관계형 데이터베이스입니다.",
+      "redis": "캐시, 큐, 세션에 활용되는 인메모리 데이터베이스로, 성능을 최적화합니다.",
+      "rust": "고성능과 안전성을 갖춘 언어로, 중요한 시나리오에서 활용합니다.",
+      "python": "자동화, 데이터 분석, 서비스 지원에 활용되는 범용 언어입니다.",
       "kafka": "실시간 이벤트 처리를 위한 분산 메시징 플랫폼입니다.",
-      "docker": "환경 컨테이너화 및 표준화를 위한 필수 도구입니다.",
-      "kubernetes": "고가용성과 확장성을 위한 컨테이너 오케스트레이션입니다."
+      "docker": "컨테이너화를 통해 환경을 표준화하는 핵심 도구입니다.",
+      "kubernetes": "고가용성과 확장성을 위한 컨테이너 오케스트레이션 도구입니다."
     }
   },
   "timeline": {
-    "title": "내 전문적 여정",
+    "title": "경력 여정",
     "events": [
       {
         "date": "2022년 3월 - 2023년 11월",
-        "title": "시스템 분석 및 개발 학사 학위",
-        "description": "Universidade Católica de Brasília에서 학사 학위를 취득했습니다.",
+        "title": "시스템 분석 및 개발 전공 학위",
+        "description": "브라질리아 가톨릭 대학교에서 학위를 마쳤습니다.",
         "specification": [
-          "• 스크럼과 같은 애자일 방법론.",
+          "• Scrum과 같은 애자일 방법론.",
           "• 데이터베이스 기초.",
-          "• 알고리즘 및 데이터 구조.",
-          "• 객체 지향 프로그래밍.",
-          "• 소프트웨어 엔지니어링 및 모범 사례."
+          "• 알고리즘 및 자료구조.",
+          "• 객체지향 프로그래밍.",
+          "• 소프트웨어 공학 및 모범 사례."
         ],
         "icon": "graduation"
       },
       {
-        "date": "2023년 1월 - 2024년 7월",
-        "title": "소프트웨어 엔지니어 - Rizzo Dev",
-        "description": "백엔드에 중점을 두고 프론트엔드를 지원하는 풀스택 개발자로 활동했습니다.",
+        "date": "2023년 1월 - 2024년 6월",
+        "title": "풀스택 개발자 - Rizzo Dev",
+        "description": "실시간 데이터 시각화와 대시보드에 중점을 둔 반응형 웹 애플리케이션 개발 및 고도화.",
         "specification": [
-          "• Node.js와 MySQL을 사용한 백엔드 개발.",
-          "• 데이터 분석을 위한 Golang 서비스 생성.",
-          "• 캐싱과 최적화를 위한 Redis 사용.",
-          "• CI/CD 파이프라인 생성.",
-          "• 대량 데이터 스크래핑 및 분석.",
-          "• React와 Next.js를 사용한 프론트엔드 지원."
+          "• React 및 Next.js로 실시간 데이터 시각화 대시보드 개발.",
+          "• API Gateway를 통해 통합된 Node.js + TypeScript 마이크로서비스 기반 백엔드 구축.",
+          "• 실시간 데이터 처리, 백테스팅, 알림을 위한 Go 서비스 구현.",
+          "• NFT 및 토큰 데이터 수집과 처리를 위한 TypeScript 기반 웹 스크래핑 개발.",
+          "• Redis를 활용한 캐싱 및 동시 처리로 성능과 지연 시간 최적화.",
+          "• Docker 기반 컨테이너 환경과 CI/CD 파이프라인으로 빌드, 테스트, 배포 자동화."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "2024년 7월 - 현재",
+        "date": "2024년 6월 - 현재",
         "title": "소프트웨어 엔지니어 - Inside Code",
-        "description": "확장 가능하고 분산된 서비스를 개발하는 백엔드 중심 활동입니다.",
+        "description": "AWS 서버리스 아키텍처 환경에서 이벤트 기반 분산 서비스 및 게임 서버 개발.",
         "specification": [
-          "• Golang과 Node.js로 서비스 및 API 생성.",
-          "• Kafka와 SQS를 사용한 메시징 구현.",
-          "• 데이터베이스 모델링 및 마이크로서비스 간 통합.",
-          "• CI/CD 파이프라인 및 배포 자동화 생성.",
-          "• 환경 표준화 지원을 위한 Docker와 Kubernetes 사용.",
-          "• AWS 인프라 (Lambda, API Gateway, EC2, S3, VPC, CloudFront)."
+          "• AWS 서버리스 아키텍처(API Gateway, Lambda, DynamoDB, RDS, S3, EC2, SQS, EventBridge, Firehose, VPC, Route 53).",
+          "• 실시간 처리를 위한 이벤트 기반 아키텍처로 Go 게임 서버 개발 및 현대화.",
+          "• 분산 서비스와 통합된 Golang 및 Node.js 기반 견고한 백엔드와 RESTful API 구현.",
+          "• Redis를 활용한 사용자 상태 및 세션 관리로 고가용성과 서버 간 이동성 지원.",
+          "• 관계형 데이터는 PostgreSQL(RDS), 대규모 사용자/데이터 관리는 DynamoDB 사용.",
+          "• Amazon SQS 및 EventBridge로 비동기 처리와 분산 큐 오케스트레이션.",
+          "• 이벤트/메트릭 수집을 위한 Firehose 및 S3 기반 데이터 파이프라인과 데이터 레이크 구축.",
+          "• UML 다이어그램 작성, DB 모델링, 마이크로서비스 간 통합 플로우 정의.",
+          "• 단위, 통합, 부하 테스트를 포함한 고급 엔지니어링 패턴 적용."
         ],
         "icon": "briefcase"
       },
       {
         "date": "2025년 1월 - 2026년 6월",
-        "title": "대학원 - MBA in Full Cycle Architecture",
-        "description": "소프트웨어 아키텍처 및 확장 가능한 시스템에 관한 고급 연구.",
+        "title": "대학원 과정 - 풀 사이클 아키텍처 MBA",
+        "description": "소프트웨어 아키텍처와 분산 시스템에 대한 심화 학습.",
         "specification": [
-          "• 분산되고 확장 가능한 아키텍처.",
+          "• 분산 및 확장 가능한 아키텍처.",
           "• 마이크로서비스 및 이벤트 기반 아키텍처.",
           "• DevOps 및 CI/CD.",
           "• 클라우드 및 고가용성 전략.",
-          "• 현대 소프트웨어의 보안 및 모범 사례."
+          "• 보안 및 현대 소프트웨어 모범 사례."
         ],
         "icon": "graduation"
       }
@@ -110,19 +113,19 @@
     "description": "연락하기",
     "phone": "전화",
     "email": "이메일",
-    "linkedin": "링크드인",
-    "git": "깃허브",
+    "linkedin": "LinkedIn",
+    "git": "GitHub",
     "form": {
       "firstName": "이름",
       "lastName": "성",
-      "phone": "전화번호",
+      "phone": "전화",
       "subject": "제목",
       "email": "이메일",
       "message": "메시지",
-      "submit": "제출",
-      "submitting": "제출 중...",
-      "successMessage": "메시지를 보내주셔서 감사합니다. 곧 답변 드리겠습니다!",
-      "errorMessage": "문제가 발생했습니다. 다시 시도해 주세요."
+      "submit": "보내기",
+      "submitting": "전송 중...",
+      "successMessage": "메시지를 보내주셔서 감사합니다. 곧 연락드리겠습니다!",
+      "errorMessage": "오류가 발생했습니다. 다시 시도해 주세요."
     }
   }
 }

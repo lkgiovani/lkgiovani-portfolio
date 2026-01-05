@@ -12,36 +12,36 @@
     "about": "Sobre mí",
     "iAm": "Yo soy",
     "position": "Ingeniero de Software",
-    "description": "Soy un ingeniero de software con enfoque principal en el back-end. Tengo experiencia sólida en el desarrollo de servicios escalables y distribuidos con Golang y Node.js, aplicando microservicios, mensajería (Kafka, SQS) y bases de datos relacionales y NoSQL. También poseo conocimientos en front-end con React y Next.js, pero mi especialidad es el back-end, garantizando rendimiento y resiliencia."
+    "description": "Ingeniero de Software con experiencia en desarrollo back-end utilizando Golang y Node.js (TypeScript / bun.js). Experiencia en el diseño e implementación de sistemas distribuidos, escalables y de alto rendimiento, con foco en procesamiento en tiempo real, microservicios y arquitectura orientada a eventos. Experiencia práctica con mensajería (Amazon SQS, Kafka), observabilidad y DevOps (CI/CD, Docker, Kubernetes, AWS), trabajando en sistemas de juegos y plataformas de datos. Fuerte enfoque en arquitectura de software y buenas prácticas de ingeniería (SOLID, Clean Code, Design Patterns)."
   },
   "about-me": {
     "title": "Sobre mí",
-    "title2": "Hola, soy",
-    "description1": "Ingeniero de Software especializado en back-end, con experiencia en sistemas escalables, distribuidos y de alto rendimiento. Trabajo principalmente con Golang y Node.js, aunque también tengo conocimientos en front-end con React y Next.js.",
-    "description2": "En el back-end, desarrollé APIs robustas, microservicios y pipelines de mensajería usando Kafka y SQS. Tengo amplia experiencia con bases de datos relacionales (MySQL, PostgreSQL, Aurora) y NoSQL (DynamoDB, MongoDB, Redis). Aplico buenas prácticas de ingeniería de software como SOLID, Clean Code y Design Patterns.",
-    "description3": "Además del back-end, tengo experiencia complementaria en prácticas de DevOps, utilizando CI/CD, Docker, Kubernetes y servicios de AWS para apoyar la escalabilidad y disponibilidad de los sistemas.",
+    "title2": "Hola, yo soy",
+    "description1": "Ingeniero de Software especializado en back-end, con experiencia en sistemas escalables, distribuidos y de alto rendimiento. Trabajo principalmente con Golang y Node.js, y también tengo conocimientos de front-end con React y Next.js.",
+    "description2": "En el back-end, he desarrollado APIs robustas, microservicios y pipelines de mensajería usando Kafka y SQS. Tengo fuerte experiencia con bases de datos relacionales (MySQL, PostgreSQL, Aurora) y NoSQL (DynamoDB, MongoDB, Redis). Aplico buenas prácticas de ingeniería de software como SOLID, Clean Code y Design Patterns.",
+    "description3": "Además del back-end, tengo experiencia complementaria en prácticas de DevOps, utilizando CI/CD, Docker, Kubernetes y servicios AWS para apoyar la escalabilidad y la disponibilidad de los sistemas.",
     "title3": "Mis habilidades incluyen"
   },
   "technologiesCarousel": {
     "title": "Tecnologías",
     "description": {
       "default": "No encontrado",
-      "react": "Experiencia con React y Next.js para crear interfaces modernas, apoyando proyectos full-stack.",
-      "go": "Lenguaje principal para el desarrollo de back-end y microservicios de alto rendimiento, con excelente soporte de concurrencia.",
-      "javascript": "Lenguaje base del desarrollo web, utilizado tanto en front-end como en back-end.",
-      "typescript": "Tipado estático para mayor seguridad y escalabilidad en proyectos Node.js y front-end.",
-      "nextjs": "Framework de React con SSR/SSG, utilizado en proyectos de apoyo en front-end.",
-      "nodejs": "Runtime esencial para back-end escalable, APIs REST e integraciones distribuidas.",
+      "react": "Experiencia en React y Next.js para crear interfaces modernas, apoyando proyectos full-stack.",
+      "go": "Lenguaje principal para desarrollo de back-end y microservicios de alto rendimiento, con excelente soporte de concurrencia.",
+      "javascript": "Base del desarrollo web, utilizado tanto en el front-end como en el back-end.",
+      "typescript": "Tipado estático para aumentar la seguridad y escalabilidad en proyectos Node.js y front-end.",
+      "nextjs": "Framework de React con SSR/SSG, utilizado como apoyo en proyectos front-end.",
+      "nodejs": "Runtime esencial para back-ends escalables, APIs REST e integraciones distribuidas.",
       "aws_lambda": "Ejecución serverless en AWS para aplicaciones escalables.",
       "amazon_s3": "Almacenamiento de objetos escalable y seguro para archivos y contenido estático.",
       "dynamodb": "Base de datos NoSQL de AWS, optimizada para escalabilidad y baja latencia.",
-      "postgresql": "Base de datos relacional confiable y robusta, con gran soporte para consultas complejas.",
-      "mysql": "Base de datos relacional ampliamente utilizada en aplicaciones web, con soporte para transacciones y alta consistencia.",
-      "redis": "Base de datos en memoria utilizada para caché, colas y sesiones, mejorando el rendimiento.",
-      "rust": "Lenguaje de alto rendimiento y seguridad en memoria, usado en sistemas críticos.",
-      "python": "Lenguaje versátil utilizado en automatización, análisis de datos y soporte de servicios.",
-      "kafka": "Plataforma de mensajería distribuida para el procesamiento de eventos en tiempo real.",
-      "docker": "Herramienta esencial para la contenerización y estandarización de entornos.",
+      "postgresql": "Base de datos relacional confiable y robusta, con fuerte soporte para consultas complejas.",
+      "mysql": "Base de datos relacional ampliamente usada en aplicaciones web, con soporte a transacciones y alta consistencia.",
+      "redis": "Base de datos en memoria usada para caché, colas y sesiones, optimizando el rendimiento.",
+      "rust": "Lenguaje de alto rendimiento y seguridad, utilizado en escenarios críticos.",
+      "python": "Lenguaje versátil utilizado en automatización, análisis de datos y apoyo a servicios.",
+      "kafka": "Plataforma de mensajería distribuida para procesamiento de eventos en tiempo real.",
+      "docker": "Herramienta esencial para contenedorización y estandarización de entornos.",
       "kubernetes": "Orquestación de contenedores para alta disponibilidad y escalabilidad."
     }
   },
@@ -51,7 +51,7 @@
       {
         "date": "marzo 2022 - noviembre 2023",
         "title": "Grado en Análisis y Desarrollo de Sistemas",
-        "description": "Completé mi graduación en la Universidad Católica de Brasilia.",
+        "description": "Concluí mi grado en la Universidad Católica de Brasilia.",
         "specification": [
           "• Metodologías ágiles como Scrum.",
           "• Fundamentos de Bases de Datos.",
@@ -62,30 +62,33 @@
         "icon": "graduation"
       },
       {
-        "date": "enero 2023 - julio 2024",
-        "title": "Ingeniero de Software - Rizzo Dev",
-        "description": "Trabajé como desarrollador full stack, con enfoque en back-end y apoyo en front-end.",
+        "date": "enero 2023 - junio 2024",
+        "title": "Desarrollador Full Stack - Rizzo Dev",
+        "description": "Desarrollo y evolución de aplicaciones web responsivas con foco en dashboards y visualización de datos en tiempo real.",
         "specification": [
-          "• Desarrollo de back-end con Node.js y MySQL.",
-          "• Creación de servicios en Golang para análisis de datos.",
-          "• Uso de Redis para caché y optimización.",
-          "• Creación de pipelines de CI/CD.",
-          "• Scraping y análisis de grandes volúmenes de datos.",
-          "• Apoyo en front-end con React y Next.js."
+          "• Desarrollo de aplicaciones web con React y Next.js para dashboards y visualización de datos en tiempo real.",
+          "• Construcción de back-end en microservicios con Node.js + TypeScript integrado vía API Gateway.",
+          "• Implementación de servicios en Go para procesamiento de datos en tiempo real, backtesting y notificaciones.",
+          "• Desarrollo de web scraping en TypeScript para recolección y procesamiento de datos de NFTs y tokens.",
+          "• Optimización de rendimiento y latencia con Redis para caché y procesamiento concurrente.",
+          "• Entorno contenedorizado con Docker y pipelines de CI/CD para build, pruebas y despliegue automatizado."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "julio 2024 - Presente",
+        "date": "junio 2024 - Presente",
         "title": "Ingeniero de Software - Inside Code",
-        "description": "Enfoque principal en back-end, desarrollando servicios escalables y distribuidos.",
+        "description": "Actuación en arquitecturas serverless en AWS, desarrollando game servers y servicios distribuidos con arquitectura orientada a eventos.",
         "specification": [
-          "• Creación de servicios y APIs con Golang y Node.js.",
-          "• Implementación de mensajería con Kafka y SQS.",
-          "• Modelado de bases de datos e integraciones entre microservicios.",
-          "• Creación de pipelines de CI/CD y automatización de despliegues.",
-          "• Uso de Docker y Kubernetes para estandarizar entornos.",
-          "• Infraestructura en AWS (Lambda, API Gateway, EC2, S3, VPC, CloudFront)."
+          "• Arquitecturas serverless en AWS (API Gateway, Lambda, DynamoDB, RDS, S3, EC2, SQS, EventBridge, Firehose, VPC, Route 53).",
+          "• Desarrollo y modernización de game servers en Go con arquitectura orientada a eventos para procesamiento en tiempo real.",
+          "• Implementación de back-ends robustos y APIs RESTful con Golang y Node.js integrados a servicios distribuidos.",
+          "• Gestión de estado y sesión de usuarios con Redis para alta disponibilidad y movilidad entre servidores.",
+          "• Uso de PostgreSQL (RDS) para datos relacionales y DynamoDB para gestión de usuarios y datos a gran escala.",
+          "• Orquestación de procesamiento asíncrono y colas distribuidas con Amazon SQS y EventBridge.",
+          "• Creación de pipelines de datos y data lake con Firehose y S3 para recolección de eventos y métricas.",
+          "• Producción de diagramas UML, modelado de base de datos y definición de flujos de integración entre microservicios.",
+          "• Aplicación de patrones avanzados de ingeniería de software con pruebas unitarias, de integración y de carga."
         ],
         "icon": "briefcase"
       },
@@ -95,10 +98,10 @@
         "description": "Estudios avanzados en arquitectura de software y sistemas distribuidos.",
         "specification": [
           "• Arquitecturas distribuidas y escalables.",
-          "• Microservicios y arquitectura dirigida por eventos.",
+          "• Microservicios y arquitectura orientada a eventos.",
           "• DevOps y CI/CD.",
-          "• Estrategias de nube y alta disponibilidad.",
-          "• Seguridad y buenas prácticas en aplicaciones modernas."
+          "• Cloud y estrategias de alta disponibilidad.",
+          "• Seguridad y buenas prácticas en software moderno."
         ],
         "icon": "graduation"
       }
@@ -121,7 +124,7 @@
       "message": "Mensaje",
       "submit": "Enviar",
       "submitting": "Enviando...",
-      "successMessage": "¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.",
+      "successMessage": "Gracias por tu mensaje. ¡Me pondré en contacto pronto!",
       "errorMessage": "Algo salió mal. Por favor, inténtalo de nuevo."
     }
   }
