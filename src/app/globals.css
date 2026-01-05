@@ -1,6 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(229 57% 100%);
+  --color-foreground: hsl(229 63% 4%);
+  --color-muted: hsl(229 12% 86%);
+  --color-muted-foreground: hsl(229 10% 37%);
+  --color-popover: hsl(0 0% 99%);
+  --color-popover-foreground: hsl(229 63% 3%);
+  --color-card: hsl(0 0% 99%);
+  --color-card-foreground: hsl(229 63% 3%);
+  --color-border: hsl(220 13% 91%);
+  --color-input: hsl(220 13% 91%);
+  --color-primary: hsl(355.63 90.57% 58.43%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(229 20% 90%);
+  --color-secondary-foreground: hsl(229 20% 30%);
+  --color-accent: hsl(229 28% 85%);
+  --color-accent-foreground: hsl(229 28% 25%);
+  --color-destructive: hsl(3 100% 50%);
+  --color-destructive-foreground: hsl(3 0% 100%);
+  --color-ring: hsl(229 100% 62%);
+  --color-chart-1: hsl(355.63 90.57% 58.43%);
+  --color-chart-2: hsl(229 20% 90%);
+  --color-chart-3: hsl(229 28% 85%);
+  --color-chart-4: hsl(229 20% 93%);
+  --color-chart-5: hsl(355.63 93.57% 58.43%);
+
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+}
+
+.dark {
+  --color-background: hsl(229 41% 4%);
+  --color-foreground: hsl(229 23% 99%);
+  --color-muted: hsl(229 12% 14%);
+  --color-muted-foreground: hsl(229 10% 63%);
+  --color-popover: hsl(229 41% 5%);
+  --color-popover-foreground: hsl(0 0% 100%);
+  --color-card: hsl(229 41% 5%);
+  --color-card-foreground: hsl(0 0% 100%);
+  --color-border: hsl(215 27.9% 16.9%);
+  --color-input: hsl(215 27.9% 16.9%);
+  --color-primary: hsl(355.63 90.57% 58.43%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(229 14% 8%);
+  --color-secondary-foreground: hsl(229 14% 68%);
+  --color-accent: hsl(229 23% 17%);
+  --color-accent-foreground: hsl(229 23% 77%);
+  --color-destructive: hsl(3 89% 54%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-ring: hsl(229 100% 62%);
+  --color-chart-1: hsl(355.63 90.57% 58.43%);
+  --color-chart-2: hsl(229 14% 8%);
+  --color-chart-3: hsl(229 23% 17%);
+  --color-chart-4: hsl(229 14% 11%);
+  --color-chart-5: hsl(355.63 93.57% 58.43%);
+}
 
 .hexagon-container {
   position: relative;
@@ -52,77 +108,12 @@ body::-webkit-scrollbar-thumb {
   --sb-thumb-color: #f53543; /* Thumb vermelho mais forte */
 }
 
-@layer base {
-  :root {
-    --background: 229 57% 100%;
-    --foreground: 229 63% 4%;
-    --muted: 229 12% 86%;
-    --muted-foreground: 229 10% 37%;
-    --popover: 0 0% 99%;
-    --popover-foreground: 229 63% 3%;
-    --card: 0 0% 99%;
-    --card-foreground: 229 63% 3%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --primary: 355.63 90.57% 58.43%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 229 20% 90%;
-    --secondary-foreground: 229 20% 30%;
-    --accent: 229 28% 85%;
-    --accent-foreground: 229 28% 25%;
-    --destructive: 3 100% 50%;
-    --destructive-foreground: 3 0% 100%;
-    --ring: 229 100% 62%;
-    --chart-1: 355.63 90.57% 58.43%;
-    --chart-2: 229 20% 90%;
-    --chart-3: 229 28% 85%;
-    --chart-4: 229 20% 93%;
-    --chart-5: 355.63 93.57% 58.43%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 229 41% 4%;
-    --foreground: 229 23% 99%;
-    --muted: 229 12% 14%;
-    --muted-foreground: 229 10% 63%;
-    --popover: 229 41% 5%;
-    --popover-foreground: 0 0% 100%;
-    --card: 229 41% 5%;
-    --card-foreground: 0 0% 100%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --primary: 355.63 90.57% 58.43%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 229 14% 8%;
-    --secondary-foreground: 229 14% 68%;
-    --accent: 229 23% 17%;
-    --accent-foreground: 229 23% 77%;
-    --destructive: 3 89% 54%;
-    --destructive-foreground: 0 0% 100%;
-    --ring: 229 100% 62%;
-    --chart-1: 355.63 90.57% 58.43%;
-    --chart-2: 229 14% 8%;
-    --chart-3: 229 23% 17%;
-    --chart-4: 229 14% 11%;
-    --chart-5: 355.63 93.57% 58.43%;
-  }
+* {
+  border-color: var(--color-border);
+  outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }

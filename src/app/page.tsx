@@ -6,7 +6,9 @@ import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import Technologies from "@/components/sections/technologies";
 import PortfolioTimeline from "@/components/sections/timeLine";
+import ScrollNavigation from "@/components/ScrollNavigation";
 import { useEffect, useState } from "react";
+import Footer from "@/components/sections/footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -31,15 +33,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white flex flex-col">
       <Header activeSection={activeSection} />
-      <main>
+      <main className="flex-1">
         <Hero />
         <About />
         <Technologies />
         <PortfolioTimeline />
         <Contact />
       </main>
+      <ScrollNavigation />
+      <Footer />
     </div>
   );
 }
