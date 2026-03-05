@@ -42,7 +42,26 @@
       "python": "Linguagem versátil utilizada em automação, análise de dados e apoio a serviços.",
       "kafka": "Plataforma de mensageria distribuída para processamento de eventos em tempo real.",
       "docker": "Ferramenta essencial para conteinerização e padronização de ambientes.",
-      "kubernetes": "Orquestração de containers para alta disponibilidade e escalabilidade."
+      "kubernetes": "Orquestração de containers para alta disponibilidade e escalabilidade.",
+      "bunjs": "Runtime JavaScript moderno e ultrarrápido, com suporte nativo a TypeScript e foco em performance.",
+      "java": "Linguagem robusta e amplamente adotada no mercado, com forte ecossistema para aplicações empresariais.",
+      "spring_boot": "Framework Java para criação de APIs e microsserviços prontos para produção com configuração mínima.",
+      "rabbitmq": "Broker de mensagens leve e confiável para comunicação assíncrona entre serviços distribuídos.",
+      "grafana": "Plataforma de visualização de métricas e logs para monitoramento de sistemas em tempo real.",
+      "prometheus": "Sistema de monitoramento e alertas para coleta de métricas de aplicações e infraestrutura.",
+      "mongodb": "Banco de dados NoSQL orientado a documentos, ideal para dados flexíveis e de alta escala.",
+      "react_native": "Framework para desenvolvimento de aplicações móveis nativas com React e JavaScript.",
+      "zig": "Linguagem de baixo nível focada em performance, segurança e simplicidade, como alternativa ao C.",
+      "terraform": "Ferramenta de Infrastructure as Code para provisionar e gerenciar recursos de nuvem de forma declarativa.",
+      "nestjs": "Framework Node.js com TypeScript e arquitetura modular para aplicações server-side escaláveis.",
+      "jest": "Framework de testes JavaScript focado em simplicidade, usado para testes unitários e de integração.",
+      "npm": "Gerenciador de pacotes padrão do Node.js para instalar e gerenciar dependências JavaScript.",
+      "graphql": "Linguagem de consulta para APIs que permite ao cliente requisitar exatamente os dados que precisa.",
+      "nginx": "Servidor web e proxy reverso de alto desempenho usado para balanceamento de carga e servir conteúdo estático.",
+      "tailwind": "Framework CSS utilitário para construção rápida e consistente de interfaces.",
+      "github": "Plataforma de hospedagem de código com controle de versão, colaboração e workflows de CI/CD.",
+      "linux": "Sistema operacional de código aberto amplamente usado em servidores e ambientes de desenvolvimento.",
+      "git": "Sistema de controle de versão distribuído para rastrear mudanças no código e colaboração em equipe."
     }
   },
   "timeline": {

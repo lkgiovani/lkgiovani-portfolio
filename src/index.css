@@ -84,6 +84,20 @@ body::-webkit-scrollbar-thumb {
   outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
 .hexagon-image {
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   width: 100%;

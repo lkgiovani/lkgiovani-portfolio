@@ -1,62 +1,112 @@
-"use client";
-
-import * as React from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
-import { Button } from "./ui/button";
+import { flushSync } from "react-dom";
+import { cn } from "@/lib/utils";
 
 interface ModeToggleProps {
   showText?: boolean;
+  className?: string;
+  duration?: number;
 }
 
-function ModeToggle({ showText = false }: ModeToggleProps) {
+function ModeToggle({
+  showText = false,
+  className,
+  duration = 400,
+}: ModeToggleProps) {
   const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
+  const [mounted, setMounted] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setMounted(true);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
-  };
+  const isDark = mounted && resolvedTheme === "dark";
+
+  const toggleTheme = useCallback(() => {
+    if (!buttonRef.current) return;
+
+    const newIsDark = !isDark;
+
+    const applyTheme = () => {
+      flushSync(() => {
+        setTheme(newIsDark ? "dark" : "light");
+      });
+    };
+
+    if (
+      typeof document === "undefined" ||
+      !("startViewTransition" in document)
+    ) {
+      applyTheme();
+      return;
+    }
+
+    const transition = (document as any).startViewTransition(() => {
+      applyTheme();
+    });
+
+    const ready = transition?.ready;
+    if (ready && typeof ready.then === "function") {
+      ready.then(() => {
+        const button = buttonRef.current;
+        if (!button) return;
+
+        const { top, left, width, height } = button.getBoundingClientRect();
+        const x = left + width / 2;
+        const y = top + height / 2;
+        const maxRadius = Math.hypot(
+          Math.max(left, window.innerWidth - left),
+          Math.max(top, window.innerHeight - top),
+        );
+
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${maxRadius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration,
+            easing: "ease-in-out",
+            pseudoElement: "::view-transition-new(root)",
+          },
+        );
+      });
+    }
+  }, [isDark, setTheme, duration]);
 
   if (!mounted) {
     return (
-      <Button
-        variant="ghost"
-        size="icon"
-        className="px-4 w-auto gap-2 relative"
-      >
+      <button className={cn("p-2", className)}>
         <Sun className="h-[1.2rem] w-[1.2rem] text-primary" />
-      </Button>
+      </button>
     );
   }
 
-  const isDark = resolvedTheme === "dark";
-
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="px-4 w-auto gap-2 relative"
+    <button
+      ref={buttonRef}
       onClick={toggleTheme}
+      className={cn(
+        "p-2 rounded-md hover:bg-accent transition-colors",
+        className,
+      )}
     >
-      {!showText && (
-        <>
-          {!isDark && <Moon className="h-[1.2rem] w-[1.2rem] text-primary" />}
-          {isDark && <Sun className="h-[1.2rem] w-[1.2rem] text-primary" />}
-        </>
-      )}
-      {showText && !isDark && (
-        <span className="text-lg text-foreground">Light</span>
-      )}
-      {showText && isDark && (
-        <span className="text-lg text-foreground">Dark</span>
+      {showText ? (
+        <span className="text-lg text-foreground">
+          {isDark ? "Dark" : "Light"}
+        </span>
+      ) : isDark ? (
+        <Sun className="h-[1.2rem] w-[1.2rem] text-primary" />
+      ) : (
+        <Moon className="h-[1.2rem] w-[1.2rem] text-primary" />
       )}
       <span className="sr-only">Toggle theme</span>
-    </Button>
+    </button>
   );
 }
 

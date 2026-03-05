@@ -42,7 +42,26 @@
       "python": "Langage polyvalent utilisé pour l’automatisation, l’analyse de données et le support de services.",
       "kafka": "Plateforme de messagerie distribuée pour le traitement d’événements en temps réel.",
       "docker": "Outil essentiel pour la conteneurisation et la standardisation des environnements.",
-      "kubernetes": "Orchestration de conteneurs pour la haute disponibilité et la scalabilité."
+      "kubernetes": "Orchestration de conteneurs pour la haute disponibilité et la scalabilité.",
+      "bunjs": "Runtime JavaScript moderne et ultra-rapide avec support natif de TypeScript et focus sur la performance.",
+      "java": "Langage robuste et largement adopté avec un fort écosystème pour les applications d'entreprise.",
+      "spring_boot": "Framework Java pour créer des API et des microservices prêts pour la production avec une configuration minimale.",
+      "rabbitmq": "Broker de messages léger et fiable pour la communication asynchrone entre services distribués.",
+      "grafana": "Plateforme de visualisation de métriques et de logs pour la surveillance des systèmes en temps réel.",
+      "prometheus": "Système de surveillance et d'alertes pour la collecte de métriques d'applications et d'infrastructure.",
+      "mongodb": "Base de données NoSQL orientée documents, idéale pour des données flexibles et à grande échelle.",
+      "react_native": "Framework pour le développement d'applications mobiles natives avec React et JavaScript.",
+      "zig": "Langage bas niveau axé sur la performance, la sécurité et la simplicité, en alternative à C.",
+      "terraform": "Outil Infrastructure as Code pour provisionner et gérer les ressources cloud de façon déclarative.",
+      "nestjs": "Framework Node.js avec TypeScript et architecture modulaire pour des applications server-side évolutives.",
+      "jest": "Framework de tests JavaScript axé sur la simplicité, utilisé pour les tests unitaires et d'intégration.",
+      "npm": "Gestionnaire de paquets par défaut de Node.js pour installer et gérer les dépendances JavaScript.",
+      "graphql": "Langage de requête pour API permettant au client de demander exactement les données dont il a besoin.",
+      "nginx": "Serveur web et proxy inverse haute performance utilisé pour l'équilibrage de charge et le service de contenu statique.",
+      "tailwind": "Framework CSS utilitaire pour construire rapidement et de façon cohérente des interfaces.",
+      "github": "Plateforme d'hébergement de code avec contrôle de version, collaboration et workflows CI/CD.",
+      "linux": "Système d'exploitation open source largement utilisé dans les serveurs et les environnements de développement.",
+      "git": "Système de contrôle de version distribué pour suivre les changements de code et la collaboration en équipe."
     }
   },
   "timeline": {

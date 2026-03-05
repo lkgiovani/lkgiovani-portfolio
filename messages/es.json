@@ -42,7 +42,26 @@
       "python": "Lenguaje versátil utilizado en automatización, análisis de datos y apoyo a servicios.",
       "kafka": "Plataforma de mensajería distribuida para procesamiento de eventos en tiempo real.",
       "docker": "Herramienta esencial para contenedorización y estandarización de entornos.",
-      "kubernetes": "Orquestación de contenedores para alta disponibilidad y escalabilidad."
+      "kubernetes": "Orquestación de contenedores para alta disponibilidad y escalabilidad.",
+      "bunjs": "Runtime de JavaScript moderno y ultrarrápido con soporte nativo a TypeScript y foco en rendimiento.",
+      "java": "Lenguaje robusto y ampliamente adoptado con un fuerte ecosistema para aplicaciones empresariales.",
+      "spring_boot": "Framework Java para crear APIs y microservicios listos para producción con configuración mínima.",
+      "rabbitmq": "Broker de mensajes ligero y confiable para comunicación asíncrona entre servicios distribuidos.",
+      "grafana": "Plataforma de visualización de métricas y logs para el monitoreo de sistemas en tiempo real.",
+      "prometheus": "Sistema de monitoreo y alertas para la recolección de métricas de aplicaciones e infraestructura.",
+      "mongodb": "Base de datos NoSQL orientada a documentos, ideal para datos flexibles y de alta escala.",
+      "react_native": "Framework para desarrollo de aplicaciones móviles nativas con React y JavaScript.",
+      "zig": "Lenguaje de bajo nivel enfocado en rendimiento, seguridad y simplicidad, como alternativa a C.",
+      "terraform": "Herramienta de Infrastructure as Code para aprovisionar y gestionar recursos en la nube de forma declarativa.",
+      "nestjs": "Framework Node.js con TypeScript y arquitectura modular para aplicaciones server-side escalables.",
+      "jest": "Framework de pruebas JavaScript enfocado en simplicidad, usado para pruebas unitarias y de integración.",
+      "npm": "Gestor de paquetes predeterminado de Node.js para instalar y gestionar dependencias JavaScript.",
+      "graphql": "Lenguaje de consulta para APIs que permite al cliente solicitar exactamente los datos que necesita.",
+      "nginx": "Servidor web y proxy inverso de alto rendimiento usado para balanceo de carga y servir contenido estático.",
+      "tailwind": "Framework CSS utilitario para construcción rápida y consistente de interfaces.",
+      "github": "Plataforma de alojamiento de código con control de versiones, colaboración y flujos de CI/CD.",
+      "linux": "Sistema operativo de código abierto ampliamente usado en servidores y entornos de desarrollo.",
+      "git": "Sistema de control de versiones distribuido para rastrear cambios en el código y colaborar en equipo."
     }
   },
   "timeline": {

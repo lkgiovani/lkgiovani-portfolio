@@ -42,7 +42,26 @@
       "python": "Versatile language used for automation, data analysis, and service support.",
       "kafka": "Distributed messaging platform for real-time event processing.",
       "docker": "Essential tool for containerization and environment standardization.",
-      "kubernetes": "Container orchestration for high availability and scalability."
+      "kubernetes": "Container orchestration for high availability and scalability.",
+      "bunjs": "Modern and ultra-fast JavaScript runtime with native TypeScript support and a focus on performance.",
+      "java": "Robust and widely adopted language with a strong ecosystem for enterprise applications.",
+      "spring_boot": "Java framework for building production-ready APIs and microservices with minimal configuration.",
+      "rabbitmq": "Lightweight and reliable message broker for asynchronous communication between distributed services.",
+      "grafana": "Metrics and logs visualization platform for real-time system monitoring.",
+      "prometheus": "Monitoring and alerting system for collecting metrics from applications and infrastructure.",
+      "mongodb": "Document-oriented NoSQL database, ideal for flexible and high-scale data.",
+      "react_native": "Framework for building native mobile applications with React and JavaScript.",
+      "zig": "Low-level language focused on performance, safety, and simplicity, as an alternative to C.",
+      "terraform": "Infrastructure as Code tool for provisioning and managing cloud resources declaratively.",
+      "nestjs": "Node.js framework with TypeScript and modular architecture for scalable server-side applications.",
+      "jest": "JavaScript testing framework focused on simplicity, used for unit and integration tests.",
+      "npm": "Node.js default package manager for installing and managing JavaScript dependencies.",
+      "graphql": "API query language that allows clients to request exactly the data they need.",
+      "nginx": "High-performance web server and reverse proxy used for load balancing and static serving.",
+      "tailwind": "Utility-first CSS framework for rapid and consistent interface building.",
+      "github": "Code hosting platform with version control, collaboration, and CI/CD workflows.",
+      "linux": "Open-source operating system widely used in servers and development environments.",
+      "git": "Distributed version control system for tracking code changes and team collaboration."
     }
   },
   "timeline": {
