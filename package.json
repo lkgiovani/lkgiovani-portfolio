@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "start": "bun run dev"
+    "preview": "bun run build && wrangler dev",
+    "start": "bun run dev",
+    "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
+    "@cloudflare/vite-plugin": "^1.26.0",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-hover-card": "^1.1.15",
@@ -31,7 +33,8 @@
     "react-icons": "^5.5.0",
     "react-use": "^17.6.0",
     "tailwind-merge": "^3.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "wrangler": "^4.70.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
