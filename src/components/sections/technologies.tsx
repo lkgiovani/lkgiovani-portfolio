@@ -5,12 +5,14 @@ export default function Technologies() {
   const { t } = useTranslation();
 
   return (
-    <section id="technologies" className="min-h-screen flex items-center py-12">
+    <section id="technologies" className="py-16 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
           {t("technologiesCarousel.title")}
         </h2>
-        <TechnologiesCarousel />
+        <div className="-mx-4 md:mx-0">
+          <TechnologiesCarousel />
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,11 @@
 import { icon, Icon } from "./moke";
 import { useTheme } from "next-themes";
 
-const row1 = icon.slice(0, Math.ceil(icon.length / 2));
-const row2 = icon.slice(Math.ceil(icon.length / 2));
+const chunk = Math.ceil(icon.length / 4);
+const row1 = icon.slice(0, chunk);
+const row2 = icon.slice(chunk, chunk * 2);
+const row3 = icon.slice(chunk * 2, chunk * 3);
+const row4 = icon.slice(chunk * 3);
 
 interface RowProps {
   items: Icon[];
@@ -13,12 +16,13 @@ interface RowProps {
 function MarqueeRow({ items, direction, isDarkMode }: RowProps) {
   const repeated = [...items, ...items, ...items];
   return (
-    <div className="overflow-hidden w-full">
+    <div style={{ overflow: "hidden", width: "100%" }}>
       <div
         className="flex gap-3"
         style={{
           width: "max-content",
           animation: `marquee-${direction} 35s linear infinite`,
+          willChange: "transform",
         }}
       >
         {repeated.map((item, i) => {
@@ -59,9 +63,11 @@ function TechnologiesCarousel() {
         }
       `}</style>
 
-      <div className="flex flex-col gap-6 w-full">
+      <div className="flex flex-col gap-4 w-full">
         <MarqueeRow items={row1} direction="left" isDarkMode={isDarkMode} />
         <MarqueeRow items={row2} direction="right" isDarkMode={isDarkMode} />
+        <MarqueeRow items={row3} direction="left" isDarkMode={isDarkMode} />
+        <MarqueeRow items={row4} direction="right" isDarkMode={isDarkMode} />
       </div>
     </>
   );
