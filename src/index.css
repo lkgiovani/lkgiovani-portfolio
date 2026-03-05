@@ -30,7 +30,7 @@
 }
 
 .dark {
-  --color-background: hsl(229 41% 4%);
+  --color-background: hsl(216, 28%, 7%);
   --color-foreground: hsl(229 23% 99%);
   --color-muted: hsl(229 12% 14%);
   --color-muted-foreground: hsl(229 10% 63%);
@@ -82,20 +82,6 @@ body::-webkit-scrollbar-thumb {
 * {
   border-color: var(--color-border);
   outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-}
-
-::view-transition-new(root) {
-  z-index: 9999;
 }
 
 .hexagon-image {
