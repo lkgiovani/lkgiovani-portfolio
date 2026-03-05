@@ -1,9 +1,7 @@
-import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +16,7 @@ const socialLinks = [
 ];
 
 export default function Hero() {
-  const t = useTranslations("hero");
+  const { t } = useTranslation();
 
   const handleDownload = (lang: string) => {
     const fileUrl = lang === "pt" ? "/currículo.pdf" : "/curriculum.pdf";
@@ -39,12 +37,10 @@ export default function Hero() {
             Giovani souza
           </h1>
           <h2 className="text-xl sm:text-2xl mb-3 md:mb-6 text-foreground">
-            {t("iAm")}
-            <span className="text-primary"> {t("position")}</span>
+            {t("hero.iAm")}
+            <span className="text-primary"> {t("hero.position")}</span>
           </h2>
-          <p className="text-gray-400 mb-4 md:mb-8 max-w-xl">
-            {t("description")}
-          </p>
+          <p className="text-gray-400 mb-4 md:mb-8 max-w-xl">{t("hero.description")}</p>
 
           <div className="flex gap-3 md:gap-4 mb-6 md:mb-8">
             {socialLinks.map((Icon, index) => (
@@ -67,18 +63,14 @@ export default function Hero() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => handleDownload("pt")}>
-                  PT-BR
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => handleDownload("en")}>
-                  EN
-                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleDownload("pt")}>PT-BR</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleDownload("en")}>EN</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
         </div>
-        <div className="flex justify-center items-center ">
-          <Avatar className=" w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
+        <div className="flex justify-center items-center">
+          <Avatar className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
             <AvatarImage src="./eu.jpg" alt="Giovani Souza" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>

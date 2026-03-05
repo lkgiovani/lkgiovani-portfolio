@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes";
 import * as React from "react";
 const SVGComponent = (props: React.SVGProps<SVGSVGElement>) => {
   return (

@@ -1,19 +1,8 @@
 import { useState } from "react";
-import Image from "next/image";
-import {
-  Phone,
-  Mail,
-  Linkedin,
-  MapPin,
-  Facebook,
-  Send,
-  Loader2,
-  Github,
-} from "lucide-react";
-
+import { Phone, Mail, Linkedin, Send, Loader2, Github } from "lucide-react";
 import Section from "@/components/ui/section";
 import SectionTitle from "@/components/ui/section-title";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
   { Icon: Github, likes: "https://github.com/lkgiovani" },
@@ -21,13 +10,12 @@ const socialLinks = [
   { Icon: Mail, likes: "mailto:lkgiovani@gmail.com" },
   {
     Icon: Phone,
-    likes:
-      "https://wa.me/5561984806923?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação.%20Poderia%20me%20passar%20mais%20informações?",
+    likes: "https://wa.me/5561984806923?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação.%20Poderia%20me%20passar%20mais%20informações?",
   },
 ];
 
 export default function Contact() {
-  const t = useTranslations("contact");
+  const { t } = useTranslation();
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -39,9 +27,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
@@ -50,22 +36,12 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage("");
-
-    // Simulate form submission
     try {
-      // Replace with actual API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitMessage(t("form.successMessage"));
-      setFormState({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        subject: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      setSubmitMessage(t("form.errorMessage"));
+      setSubmitMessage(t("contact.form.successMessage"));
+      setFormState({ firstName: "", lastName: "", phone: "", subject: "", email: "", message: "" });
+    } catch {
+      setSubmitMessage(t("contact.form.errorMessage"));
     } finally {
       setIsSubmitting(false);
     }
@@ -73,16 +49,14 @@ export default function Contact() {
 
   return (
     <Section id="contact">
-      <SectionTitle>{t("title")} </SectionTitle>
+      <SectionTitle>{t("contact.title")}</SectionTitle>
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         <div className="flex flex-col gap-4">
           <div className="w-full h-40 relative">
-            <Image
+            <img
               src="/go.png"
-              alt={t("logoAlt")}
-              layout="fill"
-              objectFit="cover"
-              className="mb-6"
+              alt={t("contact.logoAlt")}
+              className="w-full h-full object-cover mb-6"
             />
           </div>
           <div className="flex justify-center w-full gap-6">
@@ -90,8 +64,9 @@ export default function Contact() {
               <a
                 key={index}
                 href={Icon.likes}
-                className="w-10 h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground "
+                className="w-10 h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Icon.Icon className="w-5 h-5" />
               </a>
@@ -106,9 +81,8 @@ export default function Contact() {
                 name="firstName"
                 value={formState.firstName}
                 onChange={handleChange}
-                placeholder={t("form.firstName")}
+                placeholder={t("contact.form.firstName")}
                 className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
-                aria-label={t("form.firstName")}
                 required
               />
               <input
@@ -116,9 +90,8 @@ export default function Contact() {
                 name="lastName"
                 value={formState.lastName}
                 onChange={handleChange}
-                placeholder={t("form.lastName")}
+                placeholder={t("contact.form.lastName")}
                 className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
-                aria-label={t("form.lastName")}
                 required
               />
             </div>
@@ -128,18 +101,16 @@ export default function Contact() {
                 name="phone"
                 value={formState.phone}
                 onChange={handleChange}
-                placeholder={t("form.phone")}
+                placeholder={t("contact.form.phone")}
                 className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
-                aria-label={t("form.phone")}
               />
               <input
                 type="text"
                 name="subject"
                 value={formState.subject}
                 onChange={handleChange}
-                placeholder={t("form.subject")}
+                placeholder={t("contact.form.subject")}
                 className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
-                aria-label={t("form.subject")}
                 required
               />
             </div>
@@ -148,26 +119,24 @@ export default function Contact() {
               name="email"
               value={formState.email}
               onChange={handleChange}
-              placeholder={t("form.email")}
+              placeholder={t("contact.form.email")}
               className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
-              aria-label={t("form.email")}
               required
             />
             <textarea
               name="message"
               value={formState.message}
               onChange={handleChange}
-              placeholder={t("form.message")}
+              placeholder={t("contact.form.message")}
               rows={6}
               className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none resize-none"
-              aria-label={t("form.message")}
               required
-            ></textarea>
+            />
 
             {submitMessage && (
               <div
                 className={`text-sm px-3 py-2 rounded ${
-                  submitMessage.includes("thank")
+                  submitMessage.includes("thank") || submitMessage.includes("Obrigado")
                     ? "bg-green-500/20 text-green-400"
                     : "bg-red-500/20 text-red-400"
                 }`}
@@ -184,12 +153,12 @@ export default function Contact() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  {t("form.submitting")}
+                  {t("contact.form.submitting")}
                 </>
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  {t("form.submit")}
+                  {t("contact.form.submit")}
                 </>
               )}
             </button>

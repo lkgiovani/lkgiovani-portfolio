@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 import { Language } from "../Language";
 import ModeToggle from "../modeToggle";
 import SVGComponent from "../logo";
@@ -23,32 +23,25 @@ const navItems: NavItems[] = [
 ];
 
 export default function Header({ activeSection }: HeaderProps) {
-  const t = useTranslations("header.nav");
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setMobileMenuOpen(false); // Close mobile menu after clicking
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+    setMobileMenuOpen(false);
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm transition-all ${
-        isScrolled ? "shadow-md" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm transition-all ${isScrolled ? "shadow-md" : ""}`}
     >
       <nav className="container mx-auto px-4 py-4 md:py-6">
         <div className="flex items-center justify-between">
@@ -79,7 +72,7 @@ export default function Header({ activeSection }: HeaderProps) {
                         : "text-foreground hover:text-primary/75"
                     } transition-colors`}
                   >
-                    {t(item.value)}
+                    {t(`header.nav.${item.value}`)}
                   </button>
                 </li>
               ))}
@@ -95,8 +88,8 @@ export default function Header({ activeSection }: HeaderProps) {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-sm z-40 animate-in fade-in slide-in-from-top duration-300 ">
-            <ul className="flex bg-background/95 flex-col items-start space-y-6  pb-5">
+          <div className="md:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-sm z-40 animate-in fade-in slide-in-from-top duration-300">
+            <ul className="flex bg-background/95 flex-col items-start space-y-6 pb-5">
               {navItems.map((item, index) => (
                 <li
                   key={item.value}
@@ -105,14 +98,14 @@ export default function Header({ activeSection }: HeaderProps) {
                 >
                   <Button
                     onClick={() => scrollToSection(item.value)}
-                    variant={"link"}
+                    variant="link"
                     className={`text-lg capitalize ${
                       activeSection === item.value
                         ? "text-primary font-medium"
                         : "text-foreground hover:text-primary/75"
                     } transition-colors`}
                   >
-                    {t(item.value)}
+                    {t(`header.nav.${item.value}`)}
                   </Button>
                 </li>
               ))}

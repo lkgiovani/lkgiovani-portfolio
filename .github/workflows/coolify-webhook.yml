@@ -13,7 +13,6 @@ jobs:
     steps:
       - name: Trigger Coolify Deploy (Staging)
         run: |
-          echo "Enviando requisição de deploy para Coolify (Staging)..."
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
             -X GET \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
@@ -33,7 +32,6 @@ jobs:
     steps:
       - name: Trigger Coolify Deploy (Production)
         run: |
-          echo "Enviando requisição de deploy para Coolify (Production)..."
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
             -X GET \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \

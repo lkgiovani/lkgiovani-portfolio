@@ -1,10 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
-import { Check, Globe } from "lucide-react";
-
+import { Check } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -12,28 +8,25 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-
 import { languages } from "@/i18n/Config";
 import { BR, ES, FR, KR, RU, US } from "country-flag-icons/react/3x2";
 import { Button } from "../ui/button";
 
 interface ToggleLanguageProps {
-  type?: "icon" | "text"; // Prop opcional com valor padrão "icon"
+  type?: "icon" | "text";
 }
 
 export const Language = ({ type = "icon" }: ToggleLanguageProps) => {
-  const router = useRouter();
-  const currentLocale = useLocale();
+  const { i18n } = useTranslation();
+  const currentLocale = i18n.language;
 
   const changeLanguage = (newLocale: string) => {
-    Cookies.set("NEXT_LOCALE", newLocale, { path: "/" });
-    router.refresh();
+    Cookies.set("APP_LOCALE", newLocale, { path: "/" });
+    i18n.changeLanguage(newLocale);
   };
 
   const getCurrentLanguage = () => {
-    return (
-      languages.find((lang) => lang.code === currentLocale) || languages[0]
-    );
+    return languages.find((lang) => lang.code === currentLocale) || languages[0];
   };
 
   const currentLang = getCurrentLanguage();
@@ -41,11 +34,7 @@ export const Language = ({ type = "icon" }: ToggleLanguageProps) => {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="w-auto px-4 gap-2 ml-auto"
-        >
+        <Button variant="ghost" size="icon" className="w-auto px-4 gap-2 ml-auto">
           {type === "icon" ? (
             <>
               {currentLang.code === "en" ? (
@@ -82,9 +71,7 @@ export const Language = ({ type = "icon" }: ToggleLanguageProps) => {
           </DropdownMenuItem>
         ))}
         <DropdownMenuSeparator />
-        <div className="p-2 text-xs text-muted-foreground">
-          {currentLang.region}
-        </div>
+        <div className="p-2 text-xs text-muted-foreground">{currentLang.region}</div>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -4,15 +4,15 @@ import {
   SiGo,
   SiNextdotjs,
   SiNodedotjs,
-  SiAwslambda,
-  SiAmazons3,
-  SiAmazondynamodb,
   SiPostgresql,
   SiMysql,
   SiRedis,
   SiRust,
   SiPython,
   SiReact,
+  SiDocker,
+  SiKubernetes,
+  SiApachekafka,
 } from "react-icons/si";
 
 export type Icon = {
@@ -22,15 +22,15 @@ export type Icon = {
     | "Go"
     | "Next.js"
     | "Node.js"
-    | "AWS Lambda"
-    | "Amazon S3"
-    | "DynamoDB"
     | "PostgreSQL"
     | "MySQL"
     | "Redis"
     | "Rust"
     | "Python"
-    | "React";
+    | "React"
+    | "Docker"
+    | "Kubernetes"
+    | "Kafka";
   IconComponent: any;
   colorDark: string;
   colorLight: string;
@@ -68,24 +68,6 @@ export const icon: Icon[] = [
     colorLight: "#68A063",
   },
   {
-    name: "AWS Lambda",
-    IconComponent: SiAwslambda,
-    colorDark: "#FF9900",
-    colorLight: "#FF9900",
-  },
-  {
-    name: "Amazon S3",
-    IconComponent: SiAmazons3,
-    colorDark: "#569A31",
-    colorLight: "#569A31",
-  },
-  {
-    name: "DynamoDB",
-    IconComponent: SiAmazondynamodb,
-    colorDark: "#4053D6",
-    colorLight: "#4053D6",
-  },
-  {
     name: "PostgreSQL",
     IconComponent: SiPostgresql,
     colorDark: "#336791",
@@ -120,5 +102,23 @@ export const icon: Icon[] = [
     IconComponent: SiReact,
     colorDark: "#61DAFB",
     colorLight: "#61DAFB",
+  },
+  {
+    name: "Docker",
+    IconComponent: SiDocker,
+    colorDark: "#2496ED",
+    colorLight: "#2496ED",
+  },
+  {
+    name: "Kubernetes",
+    IconComponent: SiKubernetes,
+    colorDark: "#326CE5",
+    colorLight: "#326CE5",
+  },
+  {
+    name: "Kafka",
+    IconComponent: SiApachekafka,
+    colorDark: "#ffffff",
+    colorLight: "#231F20",
   },
 ];

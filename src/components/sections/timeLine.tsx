@@ -4,17 +4,10 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import {
-  Calendar,
-  Code,
-  Briefcase,
-  GraduationCap,
-  Award,
-  ChevronDown,
-} from "lucide-react";
+import { Calendar, Code, Briefcase, GraduationCap, Award, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 import Section from "../ui/section";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 const iconMap = {
   graduation: GraduationCap,
@@ -24,7 +17,7 @@ const iconMap = {
   award: Award,
 };
 
-const TimelineEvent = ({ event, index }: any) => {
+const TimelineEvent = ({ event, index }: { event: any; index: number }) => {
   const ref = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const { scrollYProgress } = useScroll({
@@ -34,20 +27,13 @@ const TimelineEvent = ({ event, index }: any) => {
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-  const x = useTransform(
-    scrollYProgress,
-    [0, 0.5],
-    [index % 2 === 0 ? 50 : -50, 0]
-  );
+  const x = useTransform(scrollYProgress, [0, 0.5], [index % 2 === 0 ? 50 : -50, 0]);
 
   const Icon = iconMap[event.icon as keyof typeof iconMap] || Calendar;
-  const hasSpecification =
-    Array.isArray(event.specification) && event.specification.length > 0;
+  const hasSpecification = Array.isArray(event.specification) && event.specification.length > 0;
 
   const toggleExpanded = () => {
-    if (hasSpecification) {
-      setIsExpanded(!isExpanded);
-    }
+    if (hasSpecification) setIsExpanded(!isExpanded);
   };
 
   return (
@@ -55,15 +41,10 @@ const TimelineEvent = ({ event, index }: any) => {
       ref={ref}
       style={{ opacity, scale, x }}
       className={`mb-16 gap-2 flex items-center w-full
-        ${
-          index % 2 === 0
-            ? "md:flex-row-reverse md:justify-between sm:justify-end"
-            : "md:justify-between sm:justify-end"
-        }
+        ${index % 2 === 0 ? "md:flex-row-reverse md:justify-between sm:justify-end" : "md:justify-between sm:justify-end"}
         flex-col sm:flex-row
       `}
     >
-      {/* Hide this div on mobile */}
       <div className="order-1 w-5/12 hidden md:block"></div>
       <motion.div
         className="z-20 flex items-center order-1 bg-primary shadow-xl w-12 h-12 rounded-full sm:mx-0 mb-3 sm:mb-0 -ml-6 sm:ml-0"
@@ -73,13 +54,8 @@ const TimelineEvent = ({ event, index }: any) => {
         <Icon className="w-6 h-6 text-primary-foreground mx-auto" />
       </motion.div>
       <motion.div
-        className={`order-1 md:w-5/12 w-full sm:w-10/12 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl px-6 py-4 backdrop-blur-sm bg-opacity-80 ${
-          hasSpecification ? "cursor-pointer" : ""
-        }`}
-        whileHover={{
-          scale: 1.05,
-          boxShadow: "0 0 20px rgba(183, 36, 73, 10)",
-        }}
+        className={`order-1 md:w-5/12 w-full sm:w-10/12 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl px-6 py-4 backdrop-blur-sm bg-opacity-80 ${hasSpecification ? "cursor-pointer" : ""}`}
+        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(183, 36, 73, 10)" }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         onClick={toggleExpanded}
         onMouseEnter={() => hasSpecification && setIsExpanded(true)}
@@ -87,14 +63,9 @@ const TimelineEvent = ({ event, index }: any) => {
       >
         <div>
           <div className="flex items-center justify-between">
-            <h3 className="mb-3 font-bold text-foreground text-xl">
-              {event.title}
-            </h3>
+            <h3 className="mb-3 font-bold text-foreground text-xl">{event.title}</h3>
             {hasSpecification && (
-              <motion.div
-                animate={{ rotate: isExpanded ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
                 <ChevronDown className="w-5 h-5 text-foreground" />
               </motion.div>
             )}
@@ -102,9 +73,7 @@ const TimelineEvent = ({ event, index }: any) => {
           <p className="text-sm leading-snug tracking-wide text-foreground text-opacity-100">
             {event.description}
           </p>
-          <p className="mt-2 text-xs text-foreground font-semibold">
-            {event.date}
-          </p>
+          <p className="mt-2 text-xs text-foreground font-semibold">{event.date}</p>
 
           <AnimatePresence>
             {isExpanded && hasSpecification && (
@@ -117,9 +86,7 @@ const TimelineEvent = ({ event, index }: any) => {
               >
                 {event.specification.map((string: string, idx: number) => (
                   <div key={idx} className="mb-2 last:mb-0">
-                    <p className="text-sm text-foreground leading-relaxed">
-                      {string}
-                    </p>
+                    <p className="text-sm text-foreground leading-relaxed">{string}</p>
                   </div>
                 ))}
               </motion.div>
@@ -132,7 +99,7 @@ const TimelineEvent = ({ event, index }: any) => {
 };
 
 export default function PortfolioTimeline() {
-  const t = useTranslations("timeline");
+  const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -141,23 +108,20 @@ export default function PortfolioTimeline() {
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "70%"]);
 
-  // Get the translated timeline events
-  const timelineEvents = t.raw("events") as Array<{
+  const rawEvents = t("timeline.events", { returnObjects: true });
+  const timelineEvents = Array.isArray(rawEvents) ? rawEvents as Array<{
     date: string;
     title: string;
     description: string;
     icon?: string;
     specification?: string[];
-  }>;
+  }> : [];
 
-  // Map icons to events (these are hardcoded since they're not part of translations)
-  const eventsWithIcons = timelineEvents.map((event, index) => {
-    const iconKeys = ["graduation", "code", "briefcase", "calendar", "award"];
-    return {
-      ...event,
-      icon: iconKeys[index % iconKeys.length],
-    };
-  });
+  const iconKeys = ["graduation", "code", "briefcase", "calendar", "award"];
+  const eventsWithIcons = timelineEvents.map((event, index) => ({
+    ...event,
+    icon: iconKeys[index % iconKeys.length],
+  }));
 
   return (
     <Section id="services">
@@ -168,10 +132,9 @@ export default function PortfolioTimeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {t("title")}
+          {t("timeline.title")}
         </motion.h2>
         <div className="relative wrap overflow-hidden p-4 sm:p-10 h-full">
-          {/* Desktop timeline vertical line - only visible on md screens and up */}
           <motion.div
             className="border-2-2 absolute border-primary hidden md:block"
             style={{
