@@ -13,7 +13,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`flex items-center py-16 min-h-screen ${className}`}
+      className={`py-16 md:py-24 ${className}`}
     >
       <div className="container mx-auto px-4">{children}</div>
     </section>

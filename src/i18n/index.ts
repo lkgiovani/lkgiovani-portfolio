@@ -5,9 +5,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import en from "../../messages/en.json";
 import ptBr from "../../messages/pt-br.json";
 import es from "../../messages/es.json";
-import fr from "../../messages/fr.json";
-import ko from "../../messages/ko.json";
-import ru from "../../messages/ru.json";
 
 i18n
   .use(LanguageDetector)
@@ -17,9 +14,6 @@ i18n
       en: { translation: en },
       "pt-br": { translation: ptBr },
       es: { translation: es },
-      fr: { translation: fr },
-      ko: { translation: ko },
-      ru: { translation: ru },
     },
     fallbackLng: "pt-br",
     lowerCaseLng: true,

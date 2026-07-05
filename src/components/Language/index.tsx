@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { languages } from "@/i18n/Config";
-import { BR, ES, FR, KR, RU, US } from "country-flag-icons/react/3x2";
+import { BR, ES, US } from "country-flag-icons/react/3x2";
 import { Button } from "../ui/button";
 
 interface ToggleLanguageProps {
@@ -41,12 +41,6 @@ export const Language = ({ type = "icon" }: ToggleLanguageProps) => {
                 <US className="h-[1.2rem] w-[1.2rem]" aria-label="English" />
               ) : currentLang.code === "es" ? (
                 <ES className="h-[1.2rem] w-[1.2rem]" aria-label="Español" />
-              ) : currentLang.code === "fr" ? (
-                <FR className="h-[1.2rem] w-[1.2rem]" aria-label="Français" />
-              ) : currentLang.code === "ko" ? (
-                <KR className="h-[1.2rem] w-[1.2rem]" aria-label="한국어" />
-              ) : currentLang.code === "ru" ? (
-                <RU className="h-[1.2rem] w-[1.2rem]" aria-label="Русский" />
               ) : (
                 <BR className="h-[1.2rem] w-[1.2rem]" aria-label="Português" />
               )}

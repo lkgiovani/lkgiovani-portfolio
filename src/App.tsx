@@ -13,21 +13,37 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const sections = Array.from(document.querySelectorAll("section"));
+    // Track how much of the viewport each section covers; the dominant one wins.
+    const coverage = new Map<string, number>();
 
-      sections.forEach((section) => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        if (scrollPosition >= top && scrollPosition < top + height) {
-          setActiveSection(section.id);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          coverage.set(entry.target.id, entry.intersectionRect.height);
         }
-      });
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+        let bestId = "";
+        let bestCoverage = 0;
+        for (const [id, height] of coverage) {
+          if (height > bestCoverage) {
+            bestCoverage = height;
+            bestId = id;
+          }
+        }
+
+        if (bestId) setActiveSection(bestId);
+      },
+      {
+        // Discount the fixed header so a section counts as "active" once it
+        // clears the header, not only when it reaches the viewport center.
+        rootMargin: "-96px 0px 0px 0px",
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   return (

@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Reveal from "@/components/ui/reveal";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +13,7 @@ import {
 const socialLinks = [
   { Icon: Github, likes: "https://github.com/lkgiovani" },
   { Icon: Linkedin, likes: "https://www.linkedin.com/in/lkgiovani/" },
-  { Icon: Mail, likes: "mailto:lkgiovani@gmail.com" },
+  { Icon: Mail, likes: "mailto:lkgiovani.dev@gmail.com" },
 ];
 
 export default function Hero() {
@@ -30,51 +31,61 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="h-screen flex items-center relative">
+    <section id="home" className="flex items-center relative pt-32 pb-16 md:pt-40 md:pb-24">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-foreground">
-            Giovani souza
-          </h1>
-          <h2 className="text-xl sm:text-2xl mb-3 md:mb-6 text-foreground">
-            {t("hero.iAm")}
-            <span className="text-primary"> {t("hero.position")}</span>
-          </h2>
-          <p className="text-gray-400 mb-4 md:mb-8 max-w-xl">{t("hero.description")}</p>
+          <Reveal delay={0}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-foreground">
+              Giovani souza
+            </h1>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="text-xl sm:text-2xl mb-3 md:mb-6 text-foreground">
+              {t("hero.iAm")}
+              <span className="text-primary"> {t("hero.position")}</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="text-gray-400 mb-4 md:mb-8 max-w-xl">{t("hero.description")}</p>
+          </Reveal>
 
-          <div className="flex gap-3 md:gap-4 mb-6 md:mb-8">
-            {socialLinks.map((Icon, index) => (
-              <a
-                key={index}
-                href={Icon.likes}
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon.Icon className="w-4 h-4 md:w-5 md:h-5" />
-              </a>
-            ))}
-          </div>
-          <div className="flex gap-4">
-            <DropdownMenu modal={false}>
-              <DropdownMenuTrigger asChild>
-                <Button className="bg-primary hover:bg-primary/70 text-background text-sm md:text-base">
-                  Download CV
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => handleDownload("pt")}>PT-BR</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => handleDownload("en")}>EN</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+          <Reveal delay={0.3}>
+            <div className="flex gap-3 md:gap-4 mb-6 md:mb-8">
+              {socialLinks.map((Icon, index) => (
+                <a
+                  key={index}
+                  href={Icon.likes}
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-primary/80 flex items-center justify-center hover:bg-foreground/20 transition-colors text-foreground"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon.Icon className="w-4 h-4 md:w-5 md:h-5" />
+                </a>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal delay={0.4}>
+            <div className="flex gap-4">
+              <DropdownMenu modal={false}>
+                <DropdownMenuTrigger asChild>
+                  <Button className="bg-primary hover:bg-primary/70 text-background text-sm md:text-base">
+                    Download CV
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => handleDownload("pt")}>PT-BR</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => handleDownload("en")}>EN</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </Reveal>
         </div>
-        <div className="flex justify-center items-center">
+        <Reveal direction="left" delay={0.15} className="flex justify-center items-center">
           <Avatar className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
             <AvatarImage src="./eu.jpg" alt="Giovani Souza" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

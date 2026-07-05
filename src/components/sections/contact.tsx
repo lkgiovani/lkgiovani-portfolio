@@ -3,11 +3,12 @@ import { Phone, Mail, Linkedin, Send, Loader2, Github } from "lucide-react";
 import Section from "@/components/ui/section";
 import SectionTitle from "@/components/ui/section-title";
 import { useTranslation } from "react-i18next";
+import Reveal from "@/components/ui/reveal";
 
 const socialLinks = [
   { Icon: Github, likes: "https://github.com/lkgiovani" },
   { Icon: Linkedin, likes: "https://www.linkedin.com/in/lkgiovani/" },
-  { Icon: Mail, likes: "mailto:lkgiovani@gmail.com" },
+  { Icon: Mail, likes: "mailto:lkgiovani.dev@gmail.com" },
   {
     Icon: Phone,
     likes: "https://wa.me/5561984806923?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação.%20Poderia%20me%20passar%20mais%20informações?",
@@ -49,9 +50,11 @@ export default function Contact() {
 
   return (
     <Section id="contact">
-      <SectionTitle>{t("contact.title")}</SectionTitle>
+      <Reveal>
+        <SectionTitle>{t("contact.title")}</SectionTitle>
+      </Reveal>
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        <div className="flex flex-col gap-4">
+        <Reveal direction="right" className="flex flex-col gap-4">
           <div className="w-full h-40 relative">
             <img
               src="/go.png"
@@ -72,8 +75,8 @@ export default function Contact() {
               </a>
             ))}
           </div>
-        </div>
-        <div>
+        </Reveal>
+        <Reveal direction="left" delay={0.1}>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <input
@@ -163,7 +166,7 @@ export default function Contact() {
               )}
             </button>
           </form>
-        </div>
+        </Reveal>
       </div>
     </Section>
   );
