@@ -10,7 +10,7 @@ export default function ScrollNavigation() {
   const [showScrollDown, setShowScrollDown] = useState(true);
   const [currentSection, setCurrentSection] = useState("home");
 
-  const sections = ["home", "about", "technologies", "services", "contact"];
+  const sections = ["home", "about", "technologies", "services", "projects", "contact"];
 
   useEffect(() => {
     const handleScroll = () => {

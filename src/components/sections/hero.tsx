@@ -18,9 +18,11 @@ const socialLinks = [
 
 export default function Hero() {
   const { t } = useTranslation();
+  const rawStats = t("hero.stats", { returnObjects: true });
+  const stats = Array.isArray(rawStats) ? (rawStats as { value: string; label: string }[]) : [];
 
   const handleDownload = (lang: string) => {
-    const fileUrl = lang === "pt" ? "/currículo.pdf" : "/curriculum.pdf";
+    const fileUrl = lang === "pt" ? "./currículo.pdf" : "./curriculum.pdf";
     const link = document.createElement("a");
     link.href = fileUrl;
     const fileName = fileUrl.split("/").pop() || "download.pdf";
@@ -36,7 +38,7 @@ export default function Hero() {
         <div>
           <Reveal delay={0}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-foreground">
-              Giovani souza
+              Giovani Souza
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
@@ -46,7 +48,17 @@ export default function Hero() {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="text-gray-400 mb-4 md:mb-8 max-w-xl">{t("hero.description")}</p>
+            <p className="text-muted-foreground mb-6 max-w-xl">{t("hero.description")}</p>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <dl className="grid grid-cols-3 gap-4 max-w-xl mb-6 md:mb-8">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col justify-start gap-1 border-l-2 border-primary pl-3">
+                  <dt className="order-last text-xs md:text-sm text-muted-foreground">{stat.label}</dt>
+                  <dd className="text-2xl md:text-3xl font-bold leading-none text-foreground tabular-nums">{stat.value}</dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
 
           <Reveal delay={0.3}>
@@ -68,8 +80,8 @@ export default function Hero() {
             <div className="flex gap-4">
               <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
-                  <Button className="bg-primary hover:bg-primary/70 text-background text-sm md:text-base">
-                    Download CV
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm md:text-base">
+                    {t("hero.downloadCv")}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
@@ -82,7 +94,7 @@ export default function Hero() {
         </div>
         <Reveal direction="left" delay={0.15} className="flex justify-center items-center">
           <Avatar className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]">
-            <AvatarImage src="./eu.jpg" alt="Giovani Souza" />
+            <AvatarImage src="./eu.png" alt="Giovani Souza" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>
         </Reveal>

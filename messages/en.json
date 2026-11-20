@@ -5,21 +5,37 @@
       "about": "About me",
       "technologies": "Technologies",
       "services": "Timeline",
-      "contact": "Contact"
+      "contact": "Contact",
+      "projects": "Projects"
     }
   },
   "hero": {
     "about": "About me",
     "iAm": "I am",
-    "position": "Software Engineer",
-    "description": "Software Engineer with experience in back-end development using Golang and Node.js (TypeScript / bun.js). Skilled in designing and implementing distributed, scalable, high-performance systems, with a focus on real-time processing, microservices, and event-driven architecture. Hands-on experience with messaging (Amazon SQS, Kafka), observability, and DevOps (CI/CD, Docker, Kubernetes, AWS), working on game systems and data platforms. Strong focus on software architecture and engineering best practices (SOLID, Clean Code, Design Patterns)."
+    "position": "Senior Back-End Developer",
+    "description": "Back-end developer for 5 years, building distributed services in Go and Node.js. Currently at a healthtech; before that, back-end of the Gunbound relaunch.",
+    "downloadCv": "Download CV",
+    "stats": [
+      {
+        "value": "5+",
+        "label": "years in back-end"
+      },
+      {
+        "value": "10k",
+        "label": "peak concurrent players"
+      },
+      {
+        "value": "1,000+",
+        "label": "customers served"
+      }
+    ]
   },
   "about-me": {
     "title": "About me",
     "title2": "Hello, I am",
-    "description1": "Back-end focused Software Engineer with experience in scalable, distributed, high-performance systems. I mainly work with Golang and Node.js, and I also have front-end knowledge with React and Next.js.",
-    "description2": "On the back end, I have built robust APIs, microservices, and messaging pipelines using Kafka and SQS. I have strong experience with relational databases (MySQL, PostgreSQL, Aurora) and NoSQL (DynamoDB, MongoDB, Redis). I apply software engineering best practices such as SOLID, Clean Code, and Design Patterns.",
-    "description3": "In addition to back-end work, I have complementary experience with DevOps practices, using CI/CD, Docker, Kubernetes, and AWS services to support scalability and system availability.",
+    "description1": "I'm currently a senior back-end developer at a care-focused healthtech, where I build distributed services in NestJS and Go with Clean Architecture and a modular structure, integrate payment systems and handle sensitive health data under Brazil's LGPD, using PostgreSQL, MongoDB and Redis.",
+    "description2": "Before that, I spent 2 years at Inside Code owning the back-end of the Gunbound relaunch, averaging 2,000 concurrent players with weekend peaks of 10,000: a Go game server with event-driven architecture on serverless AWS, player sessions in Redis and a data lake on Firehose and S3. And before that, a year and a half on a digital-asset analytics platform with over 1,000 customers.",
+    "description3": "I work with real event-driven systems (Kafka, SQS, EventBridge), observability before the incident (Datadog, OpenTelemetry, Grafana, New Relic) and code that ages well (Clean Architecture, DDD, TDD, Testcontainers). MBA in Software Architecture from Full Cycle. Open to roles in fintech, healthtech and games.",
     "title3": "My skills include"
   },
   "technologiesCarousel": {
@@ -62,6 +78,18 @@
       "github": "Code hosting platform with version control, collaboration, and CI/CD workflows.",
       "linux": "Open-source operating system widely used in servers and development environments.",
       "git": "Distributed version control system for tracking code changes and team collaboration."
+    },
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "messaging": "Messaging and events",
+      "databases": "Databases",
+      "observability": "Observability",
+      "aws": "AWS",
+      "azure": "Azure",
+      "infra": "Infra and DevOps",
+      "tooling": "Testing, CI/CD and tools",
+      "practices": "Practices"
     }
   },
   "timeline": {
@@ -69,62 +97,95 @@
     "events": [
       {
         "date": "March 2022 - November 2023",
-        "title": "Degree in Systems Analysis and Development",
-        "description": "I completed my degree at the Catholic University of Brasília.",
+        "title": "Systems Analysis and Development - Catholic University of Brasília",
+        "description": "Associate degree in Technology (CST) in Systems Analysis and Development.",
         "specification": [
-          "• Agile methodologies such as Scrum.",
+          "• Requirements gathering and software engineering.",
           "• Database fundamentals.",
           "• Algorithms and data structures.",
           "• Object-oriented programming.",
-          "• Software engineering and best practices."
+          "• Agile methodologies such as Scrum."
         ],
         "icon": "graduation"
       },
       {
-        "date": "January 2023 - June 2024",
+        "date": "September 2022 - February 2024",
         "title": "Full Stack Developer - Rizzo Dev",
-        "description": "Development and evolution of responsive web applications with a focus on dashboards and real-time data visualization.",
+        "description": "Digital-asset analytics platform used by over 1,000 customers, with real-time market monitoring and strategy backtesting. I worked from data ingestion all the way to the dashboards.",
         "specification": [
-          "• Development of web applications with React and Next.js for dashboards and real-time data visualization.",
-          "• Back-end construction in microservices with Node.js + TypeScript integrated via API Gateway.",
-          "• Implementation of Go services for real-time data processing, backtesting, and notifications.",
-          "• Development of web scraping in TypeScript for collecting and processing NFT and token data.",
-          "• Performance and latency optimization with Redis for caching and concurrent processing.",
-          "• Containerized environment with Docker and CI/CD pipelines for automated build, test, and deployment."
+          "• Go services for concurrent real-time processing, backtesting and notifications.",
+          "• Node.js and TypeScript microservices behind an API Gateway: accounts, strategy creation and live-data webhooks.",
+          "• Collection and normalization of hundreds of market assets (Ethereum/NFTs and tokens) via TypeScript scraping.",
+          "• Lower latency and database load with Redis caching and concurrent processing.",
+          "• Real-time dashboards in React and Next.js for over 1,000 customers.",
+          "• Containerized environment with Docker and CI/CD for build, test and deploy."
         ],
         "icon": "briefcase"
       },
       {
-        "date": "June 2024 - Present",
-        "title": "Software Engineer - Inside Code",
-        "description": "Working on AWS serverless architectures, developing game servers and distributed services with event-driven architecture.",
+        "date": "February 2024 - January 2026",
+        "title": "Back-End Developer - Inside Code",
+        "description": "Back-end of the Gunbound relaunch, an online multiplayer artillery game averaging 2,000 concurrent players with weekend peaks of 10,000, on a team of 4 developers.",
         "specification": [
-          "• AWS serverless architectures (API Gateway, Lambda, DynamoDB, RDS, S3, EC2, SQS, EventBridge, Firehose, VPC, Route 53).",
-          "• Development and modernization of Go game servers with event-driven architecture for real-time processing.",
-          "• Implementation of robust back ends and RESTful APIs with Golang and Node.js integrated with distributed services.",
-          "• User state and session management with Redis for high availability and mobility between servers.",
-          "• Use of PostgreSQL (RDS) for relational data and DynamoDB for user management and high-scale data.",
-          "• Orchestration of asynchronous processing and distributed queues with Amazon SQS and EventBridge.",
-          "• Creation of data pipelines and a data lake with Firehose and S3 for collecting events and metrics.",
-          "• Production of UML diagrams, database modeling, and definition of integration flows between microservices.",
-          "• Application of advanced software engineering patterns with unit, integration, and load testing."
+          "• Full game back-end in Go with event-driven architecture for real-time matches.",
+          "• End-to-end serverless AWS: API Gateway, Lambda, DynamoDB, RDS, S3, EC2, SQS, EventBridge, Firehose, VPC and Route 53.",
+          "• Player state and sessions in Redis, allowing moves between servers without losing context.",
+          "• Queues and async processing with SQS and EventBridge, sustaining the 10,000-player peak.",
+          "• Data pipeline and data lake with Firehose and S3 for match, login and action metrics.",
+          "• RESTful APIs in Go, Node.js and Java integrated with distributed services.",
+          "• Data modeling, UML diagrams and integration flows between microservices.",
+          "• Unit, integration and load testing.",
+          "• Mentoring junior developers and supporting the team's architecture decisions."
         ],
         "icon": "briefcase"
       },
       {
         "date": "January 2025 - June 2026",
-        "title": "Postgraduate - MBA in Full Cycle Architecture",
-        "description": "Advanced studies in software architecture and distributed systems.",
+        "title": "MBA in Full Cycle Architecture - Full Cycle",
+        "description": "Postgraduate MBA in software architecture and distributed systems.",
         "specification": [
           "• Distributed and scalable architectures.",
           "• Microservices and event-driven architecture.",
           "• DevOps and CI/CD.",
-          "• Cloud and high availability strategies.",
+          "• Cloud and high-availability strategies.",
           "• Security and best practices in modern software."
         ],
         "icon": "graduation"
+      },
+      {
+        "date": "January 2026 - Present",
+        "title": "Senior Back-End Developer - CLYVO",
+        "description": "Care-focused healthtech. Responsible for platform services and for shipping complete features across the care flow.",
+        "specification": [
+          "• Distributed services in Node.js/NestJS and Go with Clean Architecture and a modular structure.",
+          "• Payment system integration covering the billing flow end to end.",
+          "• Handling sensitive health data in compliance with Brazil's LGPD.",
+          "• Observability with Datadog: metrics, logs and traces in production.",
+          "• PostgreSQL for the relational core, MongoDB for semi-structured data and Redis for caching.",
+          "• Shipping complete features, from technical design to deploy.",
+          "• Back-end technical reference for the team."
+        ],
+        "icon": "briefcase"
       }
     ]
+  },
+  "projects": {
+    "title": "Projects",
+    "viewCode": "View code on GitHub",
+    "items": {
+      "kafkaObservability": {
+        "title": "Observability with Kafka and OpenTelemetry",
+        "description": "Distributed order system in Go with Kafka showing end-to-end observability: distributed traces, business metrics, structured logs, baggage and error handling, all visible in Grafana and Kibana APM."
+      },
+      "goBoilerplate": {
+        "title": "SaaS API boilerplate in Go",
+        "description": "REST API base for SaaS back-ends with JWT auth, plans and subscriptions, payments and Redis caching. Module-based Clean Architecture, dependency injection with Uber fx, OpenTelemetry telemetry and integration tests with Testcontainers."
+      },
+      "coolerDisplay": {
+        "title": "Temperature display for TGT coolers",
+        "description": "Linux service in Go that reads the CPU temperature from system sensors and sends it to the cooler's display over HID every second, running as a systemd service."
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -141,10 +202,12 @@
       "subject": "Subject",
       "email": "Email",
       "message": "Message",
-      "submit": "Send",
-      "submitting": "Sending...",
-      "successMessage": "Thank you for your message. I will get back to you soon!",
-      "errorMessage": "Something went wrong. Please try again."
+      "submit": "Send by email",
+      "openedMessage": "Your email app should open with the message ready. If nothing opened, write directly to {{email}}.",
+      "signature": "Sent from the portfolio contact form"
     }
+  },
+  "footer": {
+    "rights": "All rights reserved."
   }
 }

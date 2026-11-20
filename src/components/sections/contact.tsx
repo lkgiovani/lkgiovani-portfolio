@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { Phone, Mail, Linkedin, Send, Loader2, Github } from "lucide-react";
+import { Phone, Mail, Linkedin, Send, Github } from "lucide-react";
 import Section from "@/components/ui/section";
 import SectionTitle from "@/components/ui/section-title";
 import { useTranslation } from "react-i18next";
 import Reveal from "@/components/ui/reveal";
 
+const CONTACT_EMAIL = "lkgiovani.dev@gmail.com";
+
+const inputClass =
+  "w-full px-4 py-3 rounded-lg bg-background/50 border border-input text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none";
+
 const socialLinks = [
   { Icon: Github, likes: "https://github.com/lkgiovani" },
   { Icon: Linkedin, likes: "https://www.linkedin.com/in/lkgiovani/" },
-  { Icon: Mail, likes: "mailto:lkgiovani.dev@gmail.com" },
+  { Icon: Mail, likes: `mailto:${CONTACT_EMAIL}` },
   {
     Icon: Phone,
     likes: "https://wa.me/5561984806923?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação.%20Poderia%20me%20passar%20mais%20informações?",
@@ -25,27 +30,32 @@ export default function Contact() {
     email: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
+  const [mailAppOpened, setMailAppOpened] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  // Sem back-end de envio: abre o app de e-mail do visitante com a mensagem pronta.
+  // O formulário não é limpo, para o visitante não perder o texto se o app não abrir.
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitMessage("");
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitMessage(t("contact.form.successMessage"));
-      setFormState({ firstName: "", lastName: "", phone: "", subject: "", email: "", message: "" });
-    } catch {
-      setSubmitMessage(t("contact.form.errorMessage"));
-    } finally {
-      setIsSubmitting(false);
-    }
+    const { firstName, lastName, phone, subject, email, message } = formState;
+    const body = [
+      message,
+      "",
+      "--",
+      `${firstName} ${lastName}`.trim(),
+      email,
+      phone,
+      t("contact.form.signature"),
+    ]
+      .filter((line, index) => index < 3 || line)
+      .join("\n");
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setMailAppOpened(true);
   };
 
   return (
@@ -57,7 +67,7 @@ export default function Contact() {
         <Reveal direction="right" className="flex flex-col gap-4">
           <div className="w-full h-40 relative">
             <img
-              src="/go.png"
+              src="./go.png"
               alt={t("contact.logoAlt")}
               className="w-full h-full object-cover mb-6"
             />
@@ -85,7 +95,7 @@ export default function Contact() {
                 value={formState.firstName}
                 onChange={handleChange}
                 placeholder={t("contact.form.firstName")}
-                className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
+                className={inputClass}
                 required
               />
               <input
@@ -94,7 +104,7 @@ export default function Contact() {
                 value={formState.lastName}
                 onChange={handleChange}
                 placeholder={t("contact.form.lastName")}
-                className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
+                className={inputClass}
                 required
               />
             </div>
@@ -105,7 +115,7 @@ export default function Contact() {
                 value={formState.phone}
                 onChange={handleChange}
                 placeholder={t("contact.form.phone")}
-                className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
+                className={inputClass}
               />
               <input
                 type="text"
@@ -113,7 +123,7 @@ export default function Contact() {
                 value={formState.subject}
                 onChange={handleChange}
                 placeholder={t("contact.form.subject")}
-                className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
+                className={inputClass}
                 required
               />
             </div>
@@ -123,7 +133,7 @@ export default function Contact() {
               value={formState.email}
               onChange={handleChange}
               placeholder={t("contact.form.email")}
-              className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none"
+              className={inputClass}
               required
             />
             <textarea
@@ -132,38 +142,22 @@ export default function Contact() {
               onChange={handleChange}
               placeholder={t("contact.form.message")}
               rows={6}
-              className="w-full px-4 py-3 rounded-lg bg-background/50 border text-foreground border-gray-700 focus:border-primary focus:outline-none resize-none"
+              className={`${inputClass} resize-none`}
               required
             />
 
-            {submitMessage && (
-              <div
-                className={`text-sm px-3 py-2 rounded ${
-                  submitMessage.includes("thank") || submitMessage.includes("Obrigado")
-                    ? "bg-green-500/20 text-green-400"
-                    : "bg-red-500/20 text-red-400"
-                }`}
-              >
-                {submitMessage}
-              </div>
+            {mailAppOpened && (
+              <p role="status" className="text-sm px-3 py-2 rounded bg-primary/10 text-foreground">
+                {t("contact.form.openedMessage", { email: CONTACT_EMAIL })}
+              </p>
             )}
 
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full py-3 px-6 rounded-lg bg-primary hover:bg-primary/80 text-foreground font-medium transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
+              className="w-full py-3 px-6 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors flex items-center justify-center gap-2"
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  {t("contact.form.submitting")}
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  {t("contact.form.submit")}
-                </>
-              )}
+              <Send className="w-4 h-4" />
+              {t("contact.form.submit")}
             </button>
           </form>
         </Reveal>

@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: hsl(229 57% 100%);
-  --color-foreground: hsl(229 63% 4%);
-  --color-muted: hsl(229 12% 86%);
-  --color-muted-foreground: hsl(229 10% 37%);
-  --color-popover: hsl(0 0% 99%);
-  --color-popover-foreground: hsl(229 63% 3%);
-  --color-card: hsl(0 0% 99%);
-  --color-card-foreground: hsl(229 63% 3%);
-  --color-border: hsl(220 13% 91%);
-  --color-input: hsl(220 13% 91%);
-  --color-primary: hsl(355.63 90.57% 58.43%);
-  --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(229 20% 90%);
-  --color-secondary-foreground: hsl(229 20% 30%);
-  --color-accent: hsl(229 28% 85%);
-  --color-accent-foreground: hsl(229 28% 25%);
-  --color-destructive: hsl(3 100% 50%);
-  --color-destructive-foreground: hsl(3 0% 100%);
-  --color-ring: hsl(229 100% 62%);
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  --color-muted: #F2F2F2;
+  --color-muted-foreground: #525252;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #000000;
+  --color-card: #FAFAFA;
+  --color-card-foreground: #000000;
+  --color-border: #E5E5E5;
+  --color-input: #D4D4D4;
+  --color-primary: #000000;
+  --color-primary-foreground: #CBF615;
+  --color-secondary: #F2F2F2;
+  --color-secondary-foreground: #000000;
+  --color-accent: #CBF615;
+  --color-accent-foreground: #000000;
+  --color-destructive: #DC2626;
+  --color-destructive-foreground: #FFFFFF;
+  --color-ring: #000000;
 
   --radius-lg: 0.5rem;
   --radius-md: calc(0.5rem - 2px);
@@ -30,33 +30,33 @@
 }
 
 .dark {
-  --color-background: hsl(216, 28%, 7%);
-  --color-foreground: hsl(229 23% 99%);
-  --color-muted: hsl(229 12% 14%);
-  --color-muted-foreground: hsl(229 10% 63%);
-  --color-popover: hsl(229 41% 5%);
-  --color-popover-foreground: hsl(0 0% 100%);
-  --color-card: hsl(229 41% 5%);
-  --color-card-foreground: hsl(0 0% 100%);
-  --color-border: hsl(215 27.9% 16.9%);
-  --color-input: hsl(215 27.9% 16.9%);
-  --color-primary: hsl(355.63 90.57% 58.43%);
-  --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(229 14% 8%);
-  --color-secondary-foreground: hsl(229 14% 68%);
-  --color-accent: hsl(229 23% 17%);
-  --color-accent-foreground: hsl(229 23% 77%);
-  --color-destructive: hsl(3 89% 54%);
-  --color-destructive-foreground: hsl(0 0% 100%);
-  --color-ring: hsl(229 100% 62%);
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+  --color-muted: #141414;
+  --color-muted-foreground: #A3A3A3;
+  --color-popover: #0B0B0B;
+  --color-popover-foreground: #FFFFFF;
+  --color-card: #0B0B0B;
+  --color-card-foreground: #FFFFFF;
+  --color-border: #262626;
+  --color-input: #333333;
+  --color-primary: #CBF615;
+  --color-primary-foreground: #000000;
+  --color-secondary: #141414;
+  --color-secondary-foreground: #E5E5E5;
+  --color-accent: #CBF615;
+  --color-accent-foreground: #000000;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-ring: #CBF615;
 }
 
 body {
   font-family: var(--font-geist), sans-serif;
   background-color: var(--color-background);
   color: var(--color-foreground);
-  --sb-track-color: #f0f0f0;
-  --sb-thumb-color: #ff6b6b;
+  --sb-track-color: #F2F2F2;
+  --sb-thumb-color: #000000;
   --sb-size: 12px;
 }
 
@@ -75,8 +75,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dark body {
-  --sb-track-color: #09090f;
-  --sb-thumb-color: #f53543;
+  --sb-track-color: #000000;
+  --sb-thumb-color: #CBF615;
 }
 
 * {

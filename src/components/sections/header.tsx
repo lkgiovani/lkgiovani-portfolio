@@ -11,7 +11,7 @@ type HeaderProps = {
 };
 
 type NavItems = {
-  value: "home" | "about" | "services" | "technologies" | "contact";
+  value: "home" | "about" | "services" | "technologies" | "projects" | "contact";
 };
 
 const navItems: NavItems[] = [
@@ -19,6 +19,7 @@ const navItems: NavItems[] = [
   { value: "about" },
   { value: "technologies" },
   { value: "services" },
+  { value: "projects" },
   { value: "contact" },
 ];
 
@@ -88,7 +89,7 @@ export default function Header({ activeSection }: HeaderProps) {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-sm z-40 animate-in fade-in slide-in-from-top duration-300">
+          <div className="md:hidden fixed inset-0 top-16 bg-background/95 backdrop-blur-sm z-40 animate-in fade-in slide-in-from-top duration-300">
             <ul className="flex bg-background/95 flex-col items-start space-y-6 pb-5">
               {navItems.map((item, index) => (
                 <li

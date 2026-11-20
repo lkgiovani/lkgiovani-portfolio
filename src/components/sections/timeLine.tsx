@@ -55,7 +55,7 @@ const TimelineEvent = ({ event, index }: { event: any; index: number }) => {
       </motion.div>
       <motion.div
         className={`order-1 md:w-5/12 w-full sm:w-10/12 bg-primary/10 dark:bg-primary/20 rounded-lg shadow-xl px-6 py-4 backdrop-blur-sm bg-opacity-80 ${hasSpecification ? "cursor-pointer" : ""}`}
-        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(183, 36, 73, 10)" }}
+        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(203, 246, 21, 0.35)" }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         onClick={toggleExpanded}
         onMouseEnter={() => hasSpecification && setIsExpanded(true)}
@@ -120,7 +120,7 @@ export default function PortfolioTimeline() {
   const iconKeys = ["graduation", "code", "briefcase", "calendar", "award"];
   const eventsWithIcons = timelineEvents.map((event, index) => ({
     ...event,
-    icon: iconKeys[index % iconKeys.length],
+    icon: event.icon ?? iconKeys[index % iconKeys.length],
   }));
 
   return (
@@ -141,7 +141,7 @@ export default function PortfolioTimeline() {
               left: "50%",
               top: "10%",
               height: lineHeight,
-              background: "linear-gradient(to bottom, #9333ea, #c084fc)",
+              background: "linear-gradient(to bottom, var(--color-primary), transparent)",
             }}
           />
           {eventsWithIcons.map((event, index) => (

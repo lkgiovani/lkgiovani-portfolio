@@ -5,6 +5,7 @@ import Hero from "./components/sections/hero";
 import About from "./components/sections/about";
 import Technologies from "./components/sections/technologies";
 import PortfolioTimeline from "./components/sections/timeLine";
+import Projects from "./components/sections/projects";
 import Contact from "./components/sections/contact";
 import ScrollNavigation from "./components/ScrollNavigation";
 import Footer from "./components/sections/footer";
@@ -48,13 +49,14 @@ export default function App() {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-      <div className="min-h-screen text-white flex flex-col rounded-2xl p-4">
+      <div className="min-h-screen text-foreground flex flex-col rounded-2xl p-4">
         <Header activeSection={activeSection} />
         <main className="flex-1">
           <Hero />
           <About />
           <Technologies />
           <PortfolioTimeline />
+          <Projects />
           <Contact />
         </main>
         <ScrollNavigation />

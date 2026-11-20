@@ -13,7 +13,7 @@ export default function Technologies() {
             {t("technologiesCarousel.title")}
           </h2>
         </Reveal>
-        <Reveal delay={0.1} className="-mx-4 md:mx-0">
+        <Reveal delay={0.1} className="max-w-6xl mx-auto">
           <TechnologiesCarousel />
         </Reveal>
       </div>
